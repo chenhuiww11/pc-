@@ -1,7 +1,7 @@
 <template>
 	
   <el-carousel :interval="5000" arrow="always" :autoplay="false">
-    <el-carousel-item v-for="item in imglist" :key="2">
+    <el-carousel-item v-for="item in imglist" :key="4">
       <img :src="item.src" class="pic" @click="jump(item.index)"/>
     </el-carousel-item>
   </el-carousel>
@@ -52,12 +52,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
  .people .el-carousel__container{
-  	height: 587px;
+  	height: 580px;
   	text-align: center;
   }
   .people .pic{
-  	width: 910px;
-  	height: 587px;
+  	width: 889px;
+  	height: 580px;
   	
   }
  .people .el-icon-arrow-right:before{

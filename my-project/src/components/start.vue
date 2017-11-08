@@ -77,7 +77,7 @@ export default {
 		position: relative;
 		background:url(../../static/shouye/renwu1.png) no-repeat;
 		background-size:100%;
-		min-height: 500px;
+		min-height: 580px;
 		box-sizing: border-box;
 		padding-top: 25%;
 		
@@ -92,7 +92,7 @@ export default {
 	}
 	.renwu{
 		width: 1200px;
-		height: 587px;
+		height: 580px;
 		margin: 0 auto;
 	}
 	.fwzhi{
