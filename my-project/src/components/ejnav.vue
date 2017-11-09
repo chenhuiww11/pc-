@@ -41,7 +41,7 @@ export default {
   		}else if(num==1){
   			this.$router.push({ name: 'allrwz'});
   		}else if(num==2){
-  			this.$router.push({ name: 'fengwuzhi'});
+  			this.$router.push({ name: 'allfwz'});
   		}else if(num==3){
   			this.$router.push({ name: 'gushiji'});
   		}

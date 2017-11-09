@@ -1,7 +1,7 @@
 <template>
 	
   <el-carousel :interval="5000" arrow="always" :autoplay="false">
-    <el-carousel-item v-for="item in imglist" :key="2">
+    <el-carousel-item v-for="item in imglisttwo" :key="2">
       <img :src="item.src" class="pic"  @click="jump(item.index)"/>
     </el-carousel-item>
   </el-carousel>
@@ -12,6 +12,11 @@ export default {
   name: 'app',
   data () {
     return {
+      imglisttwo:[
+          {'src':'./static/shouye/fw1.png',
+         'index':'2',
+        },
+      ],
       imglist:[
         {'src':'./static/shouye/fw1.png',
          'index':'2',
@@ -28,6 +33,10 @@ export default {
     }
   },
   mounted(){
+  		var self=this;
+  	setTimeout(function(){
+  		self.imglisttwo=self.imglist
+  	},2000)
   },
   methods: {
   	jump(num){

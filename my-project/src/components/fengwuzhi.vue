@@ -86,18 +86,23 @@ export default {
     jumpleft(val){
     	if(val==0){
     		this.$router.push({ name: 'fengwuzhi',params: {page: 3}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==1){
     		this.$router.push({ name: 'fengwuzhi',params: {page: 0}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==2){
     		this.$router.push({ name: 'fengwuzhi',params: {page: 1}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==3){
     		this.$router.push({ name: 'fengwuzhi',params: {page: 4}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==4){
     		this.$router.push({ name: 'fengwuzhi',params: {page: 2}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}
     },
@@ -127,7 +132,7 @@ export default {
 <style scoped>
  .fengwuzhi{
  	width: 100%;
- 	background-size:contain;
+ 	background-size:cover;
  	background: #f7ebd8;
  }
  .banner{

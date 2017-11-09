@@ -61,7 +61,7 @@ export default {
 	width: 251px;
 	height: 391px;
 	background:url(../../static/shouye/juanzhou.png) no-repeat;
-	background-size:contain;
+	background-size:cover;
 	position: absolute;
 	left: 70%;
 	z-index: 2;

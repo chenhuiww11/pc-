@@ -125,38 +125,48 @@ export default {
     jumpleft(val){
     	if(val==0){
     		this.$router.push({ name: 'renwuzhi',params: {page: 9}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==1){
     		this.$router.push({ name: 'renwuzhi',params: {page: 0}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==2){
     		this.$router.push({ name: 'renwuzhi',params: {page: 1}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==3){
     		this.$router.push({ name: 'renwuzhi',params: {page: 2}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==4){
     		this.$router.push({ name: 'renwuzhi',params: {page: 3}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}
     	else if(val==5){
     		this.$router.push({ name: 'renwuzhi',params: {page: 4}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}
     	else if(val==6){
     		this.$router.push({ name: 'renwuzhi',params: {page: 5}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}
     	else if(val==7){
     		this.$router.push({ name: 'renwuzhi',params: {page: 6}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}
     	else if(val==8){
     		this.$router.push({ name: 'renwuzhi',params: {page:7}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}
     	else if(val==9){
     		this.$router.push({ name: 'renwuzhi',params: {page: 8}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}
     },
@@ -164,32 +174,42 @@ export default {
     	if(val==0){
     		this.$router.push({ name: 'renwuzhi',params: {page: 1}});
     		window.location.reload();
+    		$('body,html').animate({ scrollTop: 0 }, 0);
     	}else if(val==1){
     		this.$router.push({ name: 'renwuzhi',params: {page: 2}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==2){
     		this.$router.push({ name: 'renwuzhi',params: {page: 3}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==3){
     		this.$router.push({ name: 'renwuzhi',params: {page: 4}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==4){
     		this.$router.push({ name: 'renwuzhi',params: {page: 5}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==5){
     		this.$router.push({ name: 'renwuzhi',params: {page: 6}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==6){
     		this.$router.push({ name: 'renwuzhi',params: {page: 7}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==7){
     		this.$router.push({ name: 'renwuzhi',params: {page: 8}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==8){
     		this.$router.push({ name: 'renwuzhi',params: {page: 9}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==9){
     		this.$router.push({ name: 'renwuzhi',params: {page: 0}});
+    			$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}
     },
@@ -201,7 +221,7 @@ export default {
 <style scoped>
  .fengwuzhi{
  	width: 100%;
- 	background-size:contain;
+ 	background-size:cover;
  	background: #f7ebd8;
  }
  .banner{

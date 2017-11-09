@@ -75,7 +75,7 @@ export default {
  	background: #fef6e8 url(../../static/gushiji/bg.jpg) no-repeat 0 98px;
  	width: 100%;
  	height: 100%;
- 	background-size:contain;
+ 	background-size:cover;
  	overflow: hidden;
  }
  .book{
@@ -87,6 +87,7 @@ export default {
  	left: 50%;
  	transform: translate(-50%,-50%);
  	-webkit-transform: translate(-50%,-50%);
+ 	overflow: hidden;
  	
  }
  .imgpic{

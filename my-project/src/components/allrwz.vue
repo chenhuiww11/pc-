@@ -137,19 +137,19 @@ export default {
  	background: #fef6e8 url(../../static/gushiji/bg.jpg) no-repeat 0 98px;
  	width: 100%;
  	min-height: 100%;
- 	background-size:contain;
+ 	background-size:cover;
  	overflow: hidden;
  	position: relative;
  }
  .book{
  	width: 1200px;
- 	height: 405px;
  	position: relative;
  	text-align: center;
- 	top: 30%;
+ 	top: 38%;
  	left: 50%;
  	transform: translate(-50%,-50%);
  	-webkit-transform: translate(-50%,-50%);
+ 	overflow: hidden;
  	
  }
  .imgpic{
@@ -190,6 +190,7 @@ export default {
     overflow: hidden;
     position: relative;
     top: 4px;
+        z-index: 3;
 }
 .yuan>img{
 	width: 270px;
