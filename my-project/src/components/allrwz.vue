@@ -58,14 +58,14 @@ export default {
     	   	name:'洛璃',
     	  	datu:'./static/renwuzhi/luoli.png',
     	  	inde:'3',
-    	  	width:'210px'
+    	  	width:'200px'
     	  },
     	   {
     	   	info:' 武祖',
     	   	name:'林动',
     	  	datu:'./static/renwuzhi/lindong.png',
     	  	inde:'4',
-    	  	width: '268px',
+    	  	width: '214px',
 
     	  },
     	   {
@@ -94,7 +94,7 @@ export default {
     	   	name:'林雨寒',
     	  	datu:'./static/renwuzhi/linyuhan.png',
     	  	inde:'8',
-    	  	width: '200px',
+    	  	width: '190px',
     	  },
     	   {
     	   	info:'邪灵将',
@@ -179,6 +179,7 @@ export default {
     height: 200px;
     border-radius:50%;
     margin: 0 auto;
+      border: 1px solid rgba(0,0,0,0); 
 }
 .inyuan{
 	width: 96%;
@@ -224,7 +225,7 @@ export default {
 	color: #B70000;
 }
 .donghua{
-	 -webkit-animation: twinkling2 2s  linear;
+	 -webkit-animation: twinkling2 1s  linear;
 }
 @-webkit-keyframes twinkling2{   /*透明度由0到1*/
    0%{

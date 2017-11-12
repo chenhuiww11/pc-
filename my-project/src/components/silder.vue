@@ -1,10 +1,21 @@
 <template>
 	
-  <el-carousel :interval="5000" arrow="always" :autoplay="false" trigger="click" height="580px">
+  <!--<el-carousel :interval="5000" arrow="always" :autoplay="false" trigger="click" height="580px">
     <el-carousel-item v-for="item in imglisttwo" :key="4">
       <img :src="item.src" class="pic" @click="jump(item.index)"/>
     </el-carousel-item>
-  </el-carousel>
+  </el-carousel>-->
+  <div class="swiper-container swiper-container-a">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" v-for="item in imglist">
+            	 <img :src="item.src" class="pic swiper-lazy" @click="jump(item.index)"/>
+            	 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
 </template>
 
 <script>
@@ -12,11 +23,6 @@ export default {
   name: 'app',
   data () {
     return {
-      imglisttwo:[
-      	{'src':'./static/shouye/1.jpg',
-         'index':'0',
-        },
-      ],
       imglist:[
         {'src':'./static/shouye/1.jpg',
          'index':'0',
@@ -45,9 +51,20 @@ export default {
   },
   mounted(){
   	var self=this;
-  	setTimeout(function(){
-  		self.imglisttwo=self.imglist
-  	},2000)
+  	 var swiper = new Swiper('.swiper-container-a', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+   		observeParents:true,//修改swiper的父元素时，自动初始化swiper
+   		preloadImages: false,
+        // Enable lazy loading
+        lazyLoading: true,
+        loop: true
+    });
   },
   methods: {
   	jump(num){
@@ -60,38 +77,33 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
- .people .el-carousel__container{
-  	height: 580px;
-  	text-align: center;
-  }
   .people .pic{
   	width: 889px;
   	height: 580px;
-  	
   }
- .people .el-icon-arrow-right:before{
-  	content: '';
-  }
- .people .el-icon-arrow-left:before{
-  	content: '';
-  }
- .people .el-carousel__arrow{
+ .people .swiper-button-next{
   	background: url(../../static/shouye/left.png);
   	width: 108px;
   	height: 72px;
   	border-radius: 0;
   }
-  .people .el-carousel__arrow:hover{
+  .people .swiper-button-next:hover{
   	background: url(../../static/shouye/leftactive.png);
   }
-  .people .el-carousel__arrow--right{
+  .people .swiper-button-prev{
+  	background: url(../../static/shouye/left.png);
+  	width: 108px;
+  	height: 72px;
+  	border-radius: 0;
+  }
+  .people .swiper-button-prev:hover{
+  	background: url(../../static/shouye/leftactive.png);
+  }
+  .people .swiper-button-next{
   	transform: rotate(180deg);
   	-webkit-transform: rotate(180deg);;
   }
- .people .carousel__arrow--left {
-    left: 4px;
-    }
-   .people  .el-carousel__button{
-    	display: none;
-    }
+  .people .swiper-slide{
+  	text-align: center;
+  }
 </style>

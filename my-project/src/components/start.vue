@@ -9,15 +9,15 @@
   			</div>
   	</div>
   	<!--风物志-->
-  	<div class="fwzhi">
+  	<div class="fwzhi" v-if="loading">
   		<div class="fwz">
   			  <fwsilder></fwsilder>
   			</div>
   	</div>
   	<!--大事纪-->
-  	<img src="../../static/shouye/dsj.png" class="dsj"/>
+  	<img src="../../static/shouye/dsj.png" class="dsj" v-if="loading"/>
   	<!--苍穹榜-->
-  	<img src="../../static/shouye/cqb.jpg" class="cqb"/>
+  	<img src="../../static/shouye/cqb.jpg" class="cqb" v-if="loading"/>
     <!--<router-view/>-->
     <div class="navw" @click="back">
     	<img src="../../static/shouye/top.png"/>
@@ -38,20 +38,24 @@ export default {
 		},
 	data () {
     return {
-      
+      loading:false,
+      height:$(document).height()/2,
     }
   },
 	mounted(){
-		setTimeout(function(){
-				var height=$('#app').height()-180
-				$('#start').css('height',height+'px')
-		},1000)
+		console.log(this.height)
 		window.addEventListener('scroll', this.handleScroll);
   },	
   methods: {
   	handleScroll () {
     	this.scrolled = window.scrollY > 0;
-    	console.log(window.scrollY)
+    	if(window.scrollY>this.height){
+    		this.loading=true;
+//  			setTimeout(function(){
+//				var height=$('#app').height()-180
+//				$('#start').css('height',height+'px')
+//		},1000)
+    	}
     	if(window.scrollY>1100){
     		$('.navw').fadeIn(500);
     	}else{
@@ -112,11 +116,11 @@ export default {
 	}
 	.dsj{
 		position: relative;
-		top: -170px;
+		/*top: -170px;*/
 	}
 	.cqb{
 		position: relative;
-		top: -170px;
+		/*top: -170px;*/
 	}
 	.navw{
 	position: fixed;
