@@ -6,9 +6,14 @@
         <div class="buy">
         	<ul class="gsjbuyinfo">
 		        <li v-for="item in imglist" @click="jump(item)">
-		            <img :src="item.datu" alt="">
+              <div class="gsjbuyinfoimg">
+                <div class="gsjbuyinfoline">
+                  <img :src="item.datu" alt="">
+                </div>
+              </div>
+                <p class="tit">{{item.tit}}</p>
 		            <p class="text">{{item.info}}</p>
-		        </li>		        
+		        </li>
 		    </ul>
         </div>
      </div>
@@ -17,7 +22,7 @@
 </template>
 
 <script>
-import ejnav from '@/components/ejnav'	
+import ejnav from '@/components/ejnav'
 export default {
   name: 'HelloWorld',
   components: {
@@ -30,31 +35,36 @@ export default {
     	 {
     	   	info:'天罗大陆',
     	  	datu:'./static/fengwuzhi/mufu.png',
-    	  	inde:'3'
+    	  	inde:'3',
+          tit:'牧府'
     	  },
     	   {
     	   	info:'武境',
     	  	datu:'./static/fengwuzhi/wujin.png',
-    	  	inde:'5'
+    	  	inde:'5',
+           tit:'武境'
     	  },
     	    {
     	   	info:'无尽火狱',
     	  	datu:'./static/fengwuzhi/huoyu.png',
-    	  	inde:'4'
+    	  	inde:'4',
+            tit:'无尽火域'
     	  },
     	   {
     	  	info:'北苍大陆',
     	  	datu:'./static/fengwuzhi/cangqiong.png',
-    	  	inde:'1'
+    	  	inde:'1',
+           tit:'苍穹宫'
     	  },
     	   {
     	   	info:'南明大陆',
     	  	datu:'./static/fengwuzhi/chijiao.png',
-    	  	inde:'2'
+    	  	inde:'2',
+           tit:'池教'
     	  },
-    	
+
     	],
-    	
+
     }
   },
   mounted(){
@@ -65,7 +75,7 @@ export default {
 //  	console.log(val.inde)
     	this.$router.push({ name: 'fengwuzhi',params: {page: val.inde}});
     },
-  }  
+  }
 }
 </script>
 
@@ -88,7 +98,7 @@ export default {
  	transform: translate(-50%,-50%);
  	-webkit-transform: translate(-50%,-50%);
  	overflow: hidden;
- 	
+
  }
  .imgpic{
  	width: 537px;
@@ -113,15 +123,44 @@ export default {
 .gsjbuyinfo li:hover{
 	cursor: pointer;
 }
+.gsjbuyinfoimg{
+  padding: 2px;
+  border: 1px solid #c3b7ae;
+}
+.gsjbuyinfoline{
+  overflow: hidden;
+}
+ .gsjbuyinfoline img{
+   display: block;
+   transition: transform 1s;
+   -webkit-transition: transform 1s; /* Safari */
+   -moz-transition: transform 1s;
+   -o-transition: transform 1s;
+ }
+ .gsjbuyinfo li:hover .gsjbuyinfoimg{
+   border: 1px solid #b70000;
+ }
+ .gsjbuyinfo li:hover .gsjbuyinfoline img{
+   transform:scale(1.2,1.2);
+   -webkit-transform:scale(1.2,1.2);
+   -moz-transform:scale(1.2,1.2);
+   -o-transform:scale(1.2,1.2);
+ }
 .gsjbuyinfo .text{
 	font-size:14px;
 	color: #37474f;
 	margin-top: 4px;
 	font-weight: 600;
-	margin-left: -2px;
-	
+  text-align: center;
 }
-.gsjbuyinfo .text:hover{
+ .gsjbuyinfo .tit{
+   color: #893832;
+  font-size: 16px;
+   font-weight: bold;
+   margin: 10px 0 5px;
+   text-align: center;
+}
+ .gsjbuyinfo li:hover .text,.gsjbuyinfo li:hover .tit{
 	color: #B70000;
 	cursor: pointer;
 }

@@ -6,7 +6,7 @@
       		人物志
       	</span>
       	<img src="../../static/shouye/line.png" class="line"/>
-      </li>  
+      </li>
       <li class="active" @click="jump(2)">
       	风物志
       	<img src="../../static/shouye/line.png" class="line"/>
@@ -49,7 +49,7 @@ export default {
   		}else if(num==5){
   			$('body,html').animate({ scrollTop: 3044 }, 200);
   		}
-  	
+
   	}
   },
 }
@@ -78,7 +78,7 @@ export default {
 	width: 100%;
 	height: 20%;
 	text-align: center;
-	font-size: 24px;
+	font-size: 22px;
 	color: #37474f;
 	box-sizing: border-box;
 	line-height: 1.6;

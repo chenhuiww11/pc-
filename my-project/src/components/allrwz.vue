@@ -13,7 +13,7 @@
 		            </div>
 		            <p class="text1">{{item.name}}</p>
 		            <p class="text">{{item.info}}</p>
-		        </li>		        
+		        </li>
 		    </ul>
         </div>
      </div>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import ejnav from '@/components/ejnav'	
+import ejnav from '@/components/ejnav'
 export default {
   name: 'HelloWorld',
   components: {
@@ -103,9 +103,9 @@ export default {
     	  	inde:'9',
     	  	width: '200px',
     	  },
-    	
+
     	],
-    	
+
     }
   },
   mounted(){
@@ -127,7 +127,7 @@ export default {
 //  	console.log(val.inde)
     	this.$router.push({ name: 'renwuzhi',params: {page: val.inde}});
     },
-  }  
+  }
 }
 </script>
 
@@ -150,7 +150,7 @@ export default {
  	transform: translate(-50%,-50%);
  	-webkit-transform: translate(-50%,-50%);
  	overflow: hidden;
- 	
+
  }
  .imgpic{
  	width: 537px;
@@ -179,7 +179,7 @@ export default {
     height: 200px;
     border-radius:50%;
     margin: 0 auto;
-      border: 1px solid rgba(0,0,0,0); 
+      border: 1px solid rgba(0,0,0,0);
 }
 .inyuan{
 	width: 96%;
@@ -219,20 +219,22 @@ export default {
 	cursor: pointer;
 }
 .quan{
-	border: 1px solid #B70000; 
+	border: 1px solid #B70000;
 }
 .gsjbuyinfo .red{
 	color: #B70000;
 }
 .donghua{
-	 -webkit-animation: twinkling2 1s  linear;
+	 -webkit-animation: twinkling2 .5s  linear;
 }
 @-webkit-keyframes twinkling2{   /*透明度由0到1*/
    0%{
 				transform:scale(1,1);
+     transform-origin: 50% 50%;
     }
     100%{
 				transform:scale(1.1,1.1);
+      transform-origin: 50% 50%;
     }
 }
 </style>
