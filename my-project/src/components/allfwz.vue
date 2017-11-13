@@ -35,31 +35,31 @@ export default {
     	 {
     	   	info:'天罗大陆',
     	  	datu:'./static/fengwuzhi/mufu.png',
-    	  	inde:'3',
+    	  	inde:'2',
           tit:'牧府'
     	  },
     	   {
     	   	info:'武境',
     	  	datu:'./static/fengwuzhi/wujin.png',
-    	  	inde:'5',
+    	  	inde:'4',
            tit:'武境'
     	  },
     	    {
     	   	info:'无尽火狱',
     	  	datu:'./static/fengwuzhi/huoyu.png',
-    	  	inde:'4',
+    	  	inde:'3',
             tit:'无尽火域'
     	  },
     	   {
     	  	info:'北苍大陆',
     	  	datu:'./static/fengwuzhi/cangqiong.png',
-    	  	inde:'1',
+    	  	inde:'0',
            tit:'苍穹宫'
     	  },
     	   {
     	   	info:'南明大陆',
     	  	datu:'./static/fengwuzhi/chijiao.png',
-    	  	inde:'2',
+    	  	inde:'1',
            tit:'池教'
     	  },
 

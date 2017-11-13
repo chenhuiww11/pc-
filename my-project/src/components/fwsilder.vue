@@ -8,6 +8,7 @@
   <div class="swiper-container swiper-container-c">
         <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="item in imglist">
+            	 <div class="move" v-bind:style="{ left: item.left,bottom:item.bottom}" @click="jump(item.index)"></div>
             	 <img :src="item.src" class="pic swiper-lazy" @click="jump(item.index)"/>
             	 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
             </div>
@@ -26,15 +27,29 @@ export default {
       imglist:[
         {'src':'./static/shouye/fw1.png',
          'index':'2',
+         'left':'58.2%',
+         'bottom':'23%',
         },
         {'src':'./static/shouye/fw2.png',
-         'index':'4'},
+         'index':'4',
+         'left':'37.5%',
+         'bottom':'16%',
+         },
         {'src':'./static/shouye/fw3.png',
-         'index':'3',},
+         'index':'3',
+		 'left':'32%',
+         'bottom':'42%',	        
+        },
         {'src':'./static/shouye/fw4.png',
-         'index':'0',},
+         'index':'0',
+        'left':'61%',
+         'bottom':'19%',
+        },
         {'src':'./static/shouye/fw5.png',
-         'index':'1',},
+         'index':'1',
+        'left':'29.5%',
+         'bottom':'43.5%',
+        },
       ]
     }
   },
@@ -95,5 +110,19 @@ export default {
   }
   .fwzhi .swiper-slide{
   	text-align: center;
+  }
+  .fwzhi .move{
+  	position: absolute;
+  	bottom: 22%;
+    left: 21%;
+  	z-index: 2;
+  	width: 100px;
+  	height: 28px;
+  	background: url(../../static/shouye/xq.png);
+  	background-size:contain;
+  }
+  .fwzhi .move:hover{
+  	background: url(../../static/shouye/xq1.png);
+  	cursor: pointer;
   }
 </style>

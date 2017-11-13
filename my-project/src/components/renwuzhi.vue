@@ -6,10 +6,20 @@
      	<img :src="imginfo.wenzi" class="text"/>
      	<div class="tupian">
      		 <div class="left" @click="jumpleft(imginfo.index)">
+     		 	<div class="bigpic">
+     		 	 <div class="pic">
      		 		<img :src="imginfo.leftpic"/>
+     		 		</div>
+     		 		 	</div>
+     		 		<p class="textinfo">{{imginfo.leftinfo}}</p>
      		 </div>
      		 <div class="right" @click="jumpright(imginfo.index)">
+     		 	<div class="bigpic">
+     		 	<div class="pic">
      		 	 <img :src="imginfo.rightpic"/>
+     		 	 	</div>
+     		 	 	</div>
+     		 	 <p class="textinfo">{{imginfo.rightinfo}}</p>
      		 </div>
      	</div>
      	<img src="../../static/gushiji/banquan.png" class="banquan"/>
@@ -34,7 +44,9 @@ export default {
     	  	datu:'./static/fengwuzhi/4.jpg',
     	  	wenzi:'./static/renwuzhi/jyn.png',
     	  	leftpic:'./static/renwuzhi/smallmk.png',
+    	  	leftinfo:'魔鲲',
     	  	rightpic:'./static/renwuzhi/smallmyx.png',
+    	  	rightinfo:'牧云熙',
     	  	index:'0'
     	  },
     	   {
@@ -43,7 +55,9 @@ export default {
     	  	wenzi:'./static/renwuzhi/myx.png',
     	  	leftpic:'./static/renwuzhi/smalljyn.png',
     	  	rightpic:'./static/renwuzhi/smallmc.png',
-    	  	index:'1'
+    	  	index:'1',
+    	  	leftinfo:'姜易年',
+    	  	rightinfo:'牧尘',
     	  },
     	   {
     	   	info:'牧尘',
@@ -51,15 +65,19 @@ export default {
     	  	wenzi:'./static/renwuzhi/mc.png',
     	  	leftpic:'./static/renwuzhi/smallmyx.png',
     	  	rightpic:'./static/renwuzhi/smallll.png',
-    	  	index:'2'
+    	  	index:'2',
+    	  	leftinfo:'牧云熙',
+    	  	rightinfo:'洛璃',
     	  },
     	   {
-    	   	info:'洛离',
+    	   	info:'洛璃',
     	  	datu:'./static/fengwuzhi/3.jpg',
     	  	wenzi:'./static/renwuzhi/ll.png',
     	  	leftpic:'./static/renwuzhi/smallmc.png',
     	  	rightpic:'./static/renwuzhi/smallld.png',
-    	  	index:'3'
+    	  	index:'3',
+    	  	leftinfo:'牧尘',
+    	  	rightinfo:'林动',
     	  },
     	   {
     	   	info:'林动',
@@ -67,7 +85,9 @@ export default {
     	  	wenzi:'./static/renwuzhi/ld.png',
     	  	leftpic:'./static/renwuzhi/smallll.png',
     	  	rightpic:'./static/renwuzhi/smallxy.png',
-    	  	index:'4'
+    	  	index:'4',
+    	  	leftinfo:'洛璃',
+    	  	rightinfo:'萧炎',
     	  },
     	   {
     	   	info:'萧炎',
@@ -75,7 +95,9 @@ export default {
     	  	wenzi:'./static/renwuzhi/xy.png',
     	  	leftpic:'./static/renwuzhi/smallld.png',
     	  	rightpic:'./static/renwuzhi/smallqy.png',
-    	  	index:'5'
+    	  	index:'5',
+    	  	leftinfo:'林动',
+    	  	rightinfo:'秦渊',
     	  },
     	   {
     	   	info:'秦渊',
@@ -83,31 +105,39 @@ export default {
     	  	wenzi:'./static/renwuzhi/qy.png',
     	  	leftpic:'./static/renwuzhi/smallxy.png',
     	  	rightpic:'./static/renwuzhi/smalltxy.png',
-    	  	index:'6'
+    	  	index:'6',
+    	  	leftinfo:'萧炎',
+    	  	rightinfo:'唐修崖',
     	  },
     	  {
-    	   	info:'唐秀牙',
+    	   	info:'唐修崖',
     	  	datu:'./static/fengwuzhi/2.jpg',
     	  	wenzi:'./static/renwuzhi/txy.png',
     	  	leftpic:'./static/renwuzhi/smallqy.png',
     	  	rightpic:'./static/renwuzhi/smalllyh.png',
-    	  	index:'7'
+    	  	index:'7',
+    	  	leftinfo:'秦渊',
+    	  	rightinfo:'林雨涵',
     	  },
     	   {
-    	   	info:'林雨涵',
+    	   	info:'林雨寒',
     	  	datu:'./static/fengwuzhi/2.jpg',
     	  	wenzi:'./static/renwuzhi/lyh.png',
     	  	leftpic:'./static/renwuzhi/smalltxy.png',
     	  	rightpic:'./static/renwuzhi/smallmk.png',
-    	  	index:'8'
+    	  	index:'8',
+    	  	leftinfo:'唐修崖',
+    	  	rightinfo:'魔鲲',
     	  },
     	  {
-    	   	info:'魔坤',
+    	   	info:'魔鲲',
     	  	datu:'./static/fengwuzhi/2.jpg',
     	  	wenzi:'./static/renwuzhi/mk.png',
     	  	leftpic:'./static/renwuzhi/smalllyh.png',
     	  	rightpic:'./static/renwuzhi/smalljyn.png',
-    	  	index:'9'
+    	  	index:'9',
+    	  	leftinfo:'林雨寒',
+    	  	rightinfo:'姜易年',
     	  },
     	
     	],
@@ -251,8 +281,47 @@ export default {
  	float: left;
  	width: 208px;
  }
- .left:hover{
+ .left img{
+ 	transition: transform 1s;
+   -webkit-transition: transform 1s; /* Safari */
+   -moz-transition: transform 1s;
+   -o-transition: transform 1s;
+ }
+ .left:hover .pic>img{
  	cursor: pointer;
+ 	transform:scale(1.2,1.2);
+   -webkit-transform:scale(1.2,1.2);
+   -moz-transform:scale(1.2,1.2);
+   -o-transform:scale(1.2,1.2);
+ }
+ .left:hover .textinfo{
+ 	color: #b70000;
+ }
+ .left:hover .bigpic{
+ border: 1px solid  #b70000;
+ }
+  .right:hover .textinfo{
+ 	color: #b70000;
+ }
+ .right:hover .bigpic{
+ border: 1px solid  #b70000;
+ }
+ .bigpic{
+ 		border-radius: 50%;
+    width: 214px;
+    height: 214px;
+    overflow: hidden;
+    border: 1px solid #C0CCDA;
+    box-sizing: border-box;
+    padding-top: 4px;
+    padding-left: 4px;
+ }
+ .pic{
+ 		background: #455a64;
+ 		border-radius:50%;
+ 		width: 204px;
+ 		height: 204px;
+ 		overflow: hidden;
  }
  .right:hover{
  	cursor: pointer;
@@ -261,8 +330,28 @@ export default {
  	float: right;
  	text-align: right;
  }
+ .right img{
+ 	transition: transform 1s;
+   -webkit-transition: transform 1s; /* Safari */
+   -moz-transition: transform 1s;
+   -o-transition: transform 1s;
+ }
+  .right:hover .pic>img{
+ 	cursor: pointer;
+ 	transform:scale(1.2,1.2);
+   -webkit-transform:scale(1.2,1.2);
+   -moz-transform:scale(1.2,1.2);
+   -o-transform:scale(1.2,1.2);
+ }
  .banquan{
  	width: 898px;
  	padding-bottom: 60px;
+ }
+ .textinfo{
+ 	color: #893832;
+ 	font-size:20px;
+ 	text-align: center;
+ 	margin-top: 20px;
+ 	font-weight: 600;
  }
 </style>

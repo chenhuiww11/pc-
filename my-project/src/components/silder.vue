@@ -8,6 +8,7 @@
   <div class="swiper-container swiper-container-a">
         <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="item in imglist">
+            	 <div class="move" @click="jump(item.index)"></div>
             	 <img :src="item.src" class="pic swiper-lazy" @click="jump(item.index)"/>
             	 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
             </div>
@@ -105,5 +106,19 @@ export default {
   }
   .people .swiper-slide{
   	text-align: center;
+  }
+  .people .move{
+  	position: absolute;
+  	bottom: 22%;
+    left: 21%;
+  	z-index: 2;
+  	width: 100px;
+  	height: 28px;
+  	background: url(../../static/shouye/xq.png);
+  	background-size:contain;
+  }
+  .people .move:hover{
+  	background: url(../../static/shouye/xq1.png);
+  	cursor: pointer;
   }
 </style>

@@ -91,6 +91,7 @@ export default {
 	color: #37474f;
 	box-sizing: border-box;
 	line-height: 1.6;
+	font-weight: 600;
 }
 .nav .line{
 	width: 80%;
