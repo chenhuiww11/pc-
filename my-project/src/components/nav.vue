@@ -31,7 +31,9 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+			msg: 'Welcome to Your Vue.js App',
+			dsjheight : '2800px',
+			cqbheight : '3200px'
     }
   },
   methods: {
@@ -45,13 +47,20 @@ export default {
   		}else if(num==3){
   			this.$router.push({ name: 'gushiji'});
   		}else if(num==4){
-  			$('body,html').animate({ scrollTop: 2180 }, 200);
+  			$('body,html').animate({ scrollTop: this.dsjheight}, 200);
   		}else if(num==5){
-  			$('body,html').animate({ scrollTop: 3044 }, 200);
+  			$('body,html').animate({ scrollTop: this.cqbheight }, 200);
   		}
 
   	}
-  },
+	},
+	beforeCreate(){
+		let self = this
+		setTimeout(()=>{
+			self.dsjheight = $(".dsj").offset().top
+			self.cqbheight = $(".cqb").offset().top
+		},3000)
+    }
 }
 </script>
 

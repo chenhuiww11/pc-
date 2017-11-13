@@ -118,7 +118,7 @@ export default {
   	var self=this;
   	self.yeshu=self.$route.params.page
   	self.imginfo=self.imglist[self.yeshu]
-  	console.log(self.yeshu)
+  	console.log(document.body.scrollHeight)
 	$('.gushiji').css('height',document.body.scrollHeight)
   },
   methods: {

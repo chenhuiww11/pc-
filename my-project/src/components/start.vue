@@ -15,7 +15,7 @@
   			</div>
   	</div>
   	<!--大事纪-->
-  	<img src="../../static/shouye/dsj.png" class="dsj" v-if="loading"/>
+  	<img src="../../static/shouye/dsj.png" class="dsj" id="dsj" v-if="loading"/>
   	<!--苍穹榜-->
   	<img src="../../static/shouye/cqb.jpg" class="cqb" v-if="loading"/>
     <!--<router-view/>-->
@@ -42,8 +42,7 @@ export default {
       height:$(document).height()/2,
     }
   },
-	mounted(){
-		console.log(this.height)
+	mounted(){	
 		window.addEventListener('scroll', this.handleScroll);
   },	
   methods: {

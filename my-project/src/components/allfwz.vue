@@ -68,7 +68,7 @@ export default {
     }
   },
   mounted(){
-	$('.gushiji').css('height',document.body.scrollHeight)
+	$('.gushiji').css('height',window.innerHeight)
   },
   methods: {
     jump(val){
