@@ -7,6 +7,7 @@
      	<div class="tupian">
      		 <div class="left" @click="jumpleft(imginfo.index)">
      		 	<div class="bigpic">
+            <canvas id="myCanvas"></canvas>
      		 	 <div class="pic">
      		 		<img :src="imginfo.leftpic"/>
      		 		</div>
@@ -15,10 +16,10 @@
      		 </div>
      		 <div class="right" @click="jumpright(imginfo.index)">
      		 	<div class="bigpic">
-     		 	<div class="pic">
-     		 	 <img :src="imginfo.rightpic"/>
+     		 	  <div class="pic">
+     		 	    <img :src="imginfo.rightpic"/>
      		 	 	</div>
-     		 	 	</div>
+     		 	</div>
      		 	 <p class="textinfo">{{imginfo.rightinfo}}</p>
      		 </div>
      	</div>
@@ -28,7 +29,7 @@
 </template>
 
 <script>
-import ejnav from '@/components/ejnav'	
+import ejnav from '@/components/ejnav'
 export default {
   name: 'HelloWorld',
   components: {
@@ -139,7 +140,7 @@ export default {
     	  	leftinfo:'林雨寒',
     	  	rightinfo:'姜易年',
     	  },
-    	
+
     	],
     	imginfo:[]
     }
@@ -150,6 +151,28 @@ export default {
   	self.imginfo=self.imglist[self.yeshu]
   	console.log(document.body.scrollHeight)
 	$('.gushiji').css('height',document.body.scrollHeight)
+
+    var canvas = document.getElementById("myCanvas");
+//简单地检测当前浏览器是否支持Canvas对象，以免在一些不支持html5的浏览器中提示语法错误
+    if(canvas.getContext){
+      //获取对应的CanvasRenderingContext2D对象(画笔)
+      var ctx = canvas.getContext("2d");
+
+      //开始一个新的绘制路径
+      ctx.beginPath();
+      //设置弧线的颜色为蓝色
+//      ctx.strokeStyle = "blue";
+      var circle = {
+        x : 107,    //圆心的x轴坐标值
+        y : 107,    //圆心的y轴坐标值
+        r : 50      //圆的半径
+      };
+//      ctx.fillStyle = "rgba(100,150,185,0.5)"
+      //沿着坐标点(100,100)为圆心、半径为50px的圆的顺时针方向绘制弧线
+      ctx.arc(circle.x, circle.y, circle.r, 0, Math.PI / 2, false);
+      //按照指定的路径绘制弧线
+//      ctx.stroke();
+    }
   },
   methods: {
     jumpleft(val){
@@ -243,12 +266,18 @@ export default {
     		window.location.reload();
     	}
     },
-  }  
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  #myCanvas{
+    width: 214px;
+    height: 214px;
+    position: absolute;
+    left: 0;
+  }
  .fengwuzhi{
  	width: 100%;
  	background-size:cover;
@@ -289,10 +318,10 @@ export default {
  }
  .left:hover .pic>img{
  	cursor: pointer;
- 	transform:scale(1.2,1.2);
-   -webkit-transform:scale(1.2,1.2);
-   -moz-transform:scale(1.2,1.2);
-   -o-transform:scale(1.2,1.2);
+   transform:scale(1.05,1.05);
+   -webkit-transform:scale(1.05,1.05);
+   -moz-transform:scale(1.05,1.05);
+   -o-transform:scale(1.05,1.05);
  }
  .left:hover .textinfo{
  	color: #b70000;
@@ -308,6 +337,7 @@ export default {
  }
  .bigpic{
  		border-radius: 50%;
+   -webkit-border-radius: 50%;
     width: 214px;
     height: 214px;
     overflow: hidden;
@@ -315,10 +345,12 @@ export default {
     box-sizing: border-box;
     padding-top: 4px;
     padding-left: 4px;
+   position: relative;
  }
  .pic{
  		background: #455a64;
  		border-radius:50%;
+   -webkit-border-radius: 50%;
  		width: 204px;
  		height: 204px;
  		overflow: hidden;
@@ -331,6 +363,7 @@ export default {
  	text-align: right;
  }
  .right img{
+   display: block;
  	transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
@@ -338,10 +371,10 @@ export default {
  }
   .right:hover .pic>img{
  	cursor: pointer;
- 	transform:scale(1.2,1.2);
-   -webkit-transform:scale(1.2,1.2);
-   -moz-transform:scale(1.2,1.2);
-   -o-transform:scale(1.2,1.2);
+ 	transform:scale(1.05,1.05);
+   -webkit-transform:scale(1.05,1.05);
+   -moz-transform:scale(1.05,1.05);
+   -o-transform:scale(1.05,1.05);
  }
  .banquan{
  	width: 898px;

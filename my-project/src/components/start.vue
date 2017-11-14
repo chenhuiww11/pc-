@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import silder from '@/components/silder'	
-import nava from '@/components/nav'	
-import fwsilder from '@/components/fwsilder'	
+import silder from '@/components/silder'
+import nava from '@/components/nav'
+import fwsilder from '@/components/fwsilder'
 export default {
   name: 'app',
   components: {
@@ -38,13 +38,20 @@ export default {
 		},
 	data () {
     return {
-      loading:false,
+      loading:true,
       height:$(document).height()/2,
     }
   },
-	mounted(){	
+	mounted(){
 		window.addEventListener('scroll', this.handleScroll);
-  },	
+    this.$nextTick(()=>{
+      setTimeout(()=>{
+        console.log($('.dsj').offset().top)
+        window.sessionStorage.setItem('dsjscrollheight',$('.dsj').offset().top+150)
+        window.sessionStorage.setItem('cqbscrollheight',$('.cqb').offset().top+50)
+      },0)
+    })
+  },
   methods: {
   	handleScroll () {
     	this.scrolled = window.scrollY > 0;
@@ -74,7 +81,7 @@ export default {
 		position: relative;
 		overflow: hidden;
 	}
-	
+
 	.people{
 		width: 100%;
 		position: relative;
@@ -83,7 +90,7 @@ export default {
 		min-height: 580px;
 		box-sizing: border-box;
 		padding-top: 25%;
-		
+
 	}
 	.title{
 		position: absolute;
