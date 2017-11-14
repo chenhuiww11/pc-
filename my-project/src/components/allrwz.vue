@@ -31,77 +31,151 @@ export default {
   data () {
     return {
     	index:'1',
+//  	imgtwo:[
+//  	 {
+//  	   	info:' 邪灵族皇子',
+//  	   	name:'姜易年',
+//  	  	datu:'./static/renwuzhi/jiangyinian1.png',
+//  	  	inde:'0',
+//  	  	width:'270px'
+//  	  },
+//  	   {
+//  	   	info:' 牧府大小姐',
+//  	   	name:'牧云熙',
+//  	  	datu:'./static/renwuzhi/muyunxi.png',
+//  	  	inde:'1',
+//  	  	width:'190px'
+//  	  },
+//  	    {
+//  	   	info:' 牧府之主',
+//  	   	name:'牧尘',
+//  	  	datu:'./static/renwuzhi/muchen.png',
+//  	  	inde:'2',
+//  	  	width:'220px'
+//  	  },
+//  	   {
+//  	  	info:' 洛神族女皇',
+//  	   	name:'洛璃',
+//  	  	datu:'./static/renwuzhi/luoli.png',
+//  	  	inde:'3',
+//  	  	width:'200px'
+//  	  },
+//  	   {
+//  	   	info:' 武祖',
+//  	   	name:'林动',
+//  	  	datu:'./static/renwuzhi/lindong.png',
+//  	  	inde:'4',
+//  	  	width: '214px',
+//
+//  	  },
+//  	   {
+//  	   	info:'炎帝',
+//  	   	name:'萧炎',
+//  	  	datu:'./static/renwuzhi/xiaoyan.png',
+//  	  	width: '226px',
+//  	  	inde:'5',
+//  	  },
+//  	   {
+//  	   	info:'池教大师兄',
+//  	   	name:'秦渊',
+//  	  	datu:'./static/renwuzhi/qingyuan.png',
+//  	  	inde:'6',
+//  	  	width: '210px',
+//  	  },
+//  	   {
+//  	   	info:'池教二师兄',
+//  	   	name:'唐修崖',
+//  	  	datu:'./static/renwuzhi/tangxiuya.png',
+//  	  	inde:'7',
+//  	  	width: '222px',
+//  	  },
+//  	   {
+//  	   	info:'苍穹宫监察使',
+//  	   	name:'林雨寒',
+//  	  	datu:'./static/renwuzhi/linyuhan.png',
+//  	  	inde:'8',
+//  	  	width: '190px',
+//  	  },
+//  	   {
+//  	   	info:'邪灵将',
+//  	   	name:'魔鲲',
+//  	  	datu:'./static/renwuzhi/smallmk.png',
+//  	  	inde:'9',
+//  	  	width: '200px',
+//  	  },
+//
+//  	],
     	imglist:[
     	 {
     	   	info:' 邪灵族皇子',
     	   	name:'姜易年',
-    	  	datu:'./static/renwuzhi/jiangyinian1.png',
+    	  	datu:'./static/renwuzhi/smalljyn.png',
     	  	inde:'0',
-    	  	width:'270px'
+    	  	width: '196px',
     	  },
     	   {
     	   	info:' 牧府大小姐',
     	   	name:'牧云熙',
-    	  	datu:'./static/renwuzhi/muyunxi.png',
+    	  	datu:'./static/renwuzhi/smallmyx.png',
     	  	inde:'1',
-    	  	width:'190px'
+    	  	width: '196px',
     	  },
     	    {
     	   	info:' 牧府之主',
     	   	name:'牧尘',
-    	  	datu:'./static/renwuzhi/muchen.png',
+    	  	datu:'./static/renwuzhi/smallmc.png',
     	  	inde:'2',
-    	  	width:'220px'
+    	  	width: '196px',
     	  },
     	   {
     	  	info:' 洛神族女皇',
     	   	name:'洛璃',
-    	  	datu:'./static/renwuzhi/luoli.png',
+    	  	datu:'./static/renwuzhi/smallll.png',
     	  	inde:'3',
-    	  	width:'200px'
+    	  	width: '196px',
     	  },
     	   {
     	   	info:' 武祖',
     	   	name:'林动',
-    	  	datu:'./static/renwuzhi/lindong.png',
+    	  	datu:'./static/renwuzhi/smallld.png',
     	  	inde:'4',
-    	  	width: '214px',
+    	  	width: '196px',
 
     	  },
     	   {
     	   	info:'炎帝',
     	   	name:'萧炎',
-    	  	datu:'./static/renwuzhi/xiaoyan.png',
-    	  	width: '226px',
+    	  	datu:'./static/renwuzhi/smallxy.png',
+    	  	width: '196px',
     	  	inde:'5',
     	  },
     	   {
     	   	info:'池教大师兄',
     	   	name:'秦渊',
-    	  	datu:'./static/renwuzhi/qingyuan.png',
+    	  	datu:'./static/renwuzhi/smallqy.png',
     	  	inde:'6',
-    	  	width: '210px',
+    	  		width:'196px',
     	  },
     	   {
     	   	info:'池教二师兄',
     	   	name:'唐修崖',
-    	  	datu:'./static/renwuzhi/tangxiuya.png',
+    	  	datu:'./static/renwuzhi/smalltxy.png',
     	  	inde:'7',
-    	  	width: '222px',
+    	  	width: '196px',
     	  },
     	   {
     	   	info:'苍穹宫监察使',
     	   	name:'林雨寒',
-    	  	datu:'./static/renwuzhi/linyuhan.png',
+    	  	datu:'./static/renwuzhi/smalllyh.png',
     	  	inde:'8',
-    	  	width: '190px',
+    	  	width:'196px',
     	  },
     	   {
     	   	info:'邪灵将',
     	   	name:'魔鲲',
     	  	datu:'./static/renwuzhi/mokun.png',
     	  	inde:'9',
-    	  	width: '200px',
+    	  	width: '196px',
     	  },
 
     	],
@@ -114,12 +188,12 @@ export default {
 		    $(this).children('.yuan').addClass('quan')
 		    $(this).children('.text').addClass('red')
 		    $(this).children('.text1').addClass('red')
-		    $(this).children().children().children().addClass('donghua')
+//		    $(this).children().children().children().addClass('donghua')
 		},function(){
 		   $(this).children('.yuan').removeClass('quan')
 		    $(this).children('.text').removeClass('red')
 		    $(this).children('.text1').removeClass('red')
-		    $(this).children().children().children().removeClass('donghua')
+//		    $(this).children().children().children().removeClass('donghua')
 		});
   },
   methods: {
@@ -230,17 +304,32 @@ export default {
 .gsjbuyinfo .red{
 	color: #B70000;
 }
-.donghua{
-	 -webkit-animation: twinkling2 .5s  linear;
+.pic{
+		transition: transform 1s;
+   -webkit-transition: transform 1s; /* Safari */
+   -moz-transition: transform 1s;
+   -ms-transition: transform 1s;
+   -o-transition: transform 1s;
 }
+.pic:hover{
+		cursor: pointer;
+ 		transform:scale(1.05,1.05);
+   -webkit-transform:scale(1.05,1.05);
+   -moz-transform:scale(1.05,1.05);
+    -ms-transform:scale(1.05,1.05);
+   -o-transform:scale(1.05,1.05);
+}
+/*.donghua{
+	 -webkit-animation: twinkling2 .5s  linear;
+}*/
 @-webkit-keyframes twinkling2{   /*透明度由0到1*/
-   0%{
+   /*0%{
 				transform:scale(1,1);
      transform-origin: 50% 50%;
     }
     100%{
 				transform:scale(1.1,1.1);
       transform-origin: 50% 50%;
-    }
+    }*/
 }
 </style>

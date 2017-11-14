@@ -5,19 +5,19 @@
   	<!--人物志-->
   	<div class="people">
   		 <div class="renwu">
-  			  <silder></silder>
+  			  <silder v-if="one"></silder>
   			</div>
   	</div>
   	<!--风物志-->
   	<div class="fwzhi" v-if="loading">
   		<div class="fwz">
-  			  <fwsilder></fwsilder>
+  			  <fwsilder v-if="one"></fwsilder>
   			</div>
   	</div>
   	<!--大事纪-->
-  	<img src="../../static/shouye/dsj.png" class="dsj" id="dsj" v-if="loading"/>
+  	<a name="002" id="002" ><img src="../../static/shouye/dsj.png" class="dsj" id="dsj" v-if="loading"/></a>
   	<!--苍穹榜-->
-  	<img src="../../static/shouye/cqb.jpg" class="cqb" v-if="loading"/>
+  	<a name="001" id="001" ><img src="../../static/shouye/cqb.jpg" class="cqb" v-if="loading"/></a>
     <!--<router-view/>-->
     <div class="navw" @click="back">
     	<img src="../../static/shouye/top.png"/>
@@ -40,6 +40,8 @@ export default {
     return {
       loading:true,
       height:$(document).height()/2,
+      count:0,
+      one:false
     }
   },
 	mounted(){
@@ -51,6 +53,15 @@ export default {
         window.sessionStorage.setItem('cqbscrollheight',$('.cqb').offset().top+50)
       },0)
     })
+     var _this = this
+            let imgs = document.querySelectorAll('img')
+            Array.from(imgs).forEach((item)=>{
+                let img = new Image()
+                img.onload = ()=>{
+                    this.count++
+                }
+                img.src=item.getAttribute('src')
+            })
   },
   methods: {
   	handleScroll () {
@@ -68,6 +79,16 @@ export default {
   	$('body,html').animate({ scrollTop: 0 }, 200);
   	}
   },
+   watch:{
+	        count (val,oldval) {
+	        	console.log(val)
+	        	var self=this;
+	            if(val >= 8){
+	                self.one=true
+//	                //然后可以对后台发送一些ajax操作
+	            }
+	        }
+        }
 }
 </script>
 
@@ -91,8 +112,9 @@ export default {
 	.title{
 		position: absolute;
 		left: 50%;
-		transform: translateX(-50%);
-		-webkit-transform: translateX(-50%);
+		margin-left: -268px;
+		/*transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);*/
 		top: 280px;
 		width: 537px;
 	}

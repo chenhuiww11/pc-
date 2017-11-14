@@ -9,8 +9,8 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="item in imglist">
             	 <div class="move" v-bind:style="{ left: item.left,bottom:item.bottom}" @click="jump(item.index)"></div>
-            	 <img :src="item.src" class="pic swiper-lazy" @click="jump(item.index)"/>
-            	 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            	 <img :src="item.src" class="pic" @click="jump(item.index)"/>
+            	<!-- <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>-->
             </div>
         </div>
         <!-- Add Arrows -->
@@ -25,27 +25,27 @@ export default {
   data () {
     return {
       imglist:[
-        {'src':'./static/shouye/fw1.png',
+        {'src':'./static/shouye/fw1-min.png',
          'index':'2',
          'left':'58.2%',
          'bottom':'23%',
         },
-        {'src':'./static/shouye/fw2.png',
+        {'src':'./static/shouye/fw2-min.png',
          'index':'4',
          'left':'37.5%',
          'bottom':'16%',
          },
-        {'src':'./static/shouye/fw3.png',
+        {'src':'./static/shouye/fw3-min.png',
          'index':'3',
 		 'left':'32%',
          'bottom':'42%',
         },
-        {'src':'./static/shouye/fw4.png',
+        {'src':'./static/shouye/fw4-min.png',
          'index':'0',
         'left':'61%',
          'bottom':'19%',
         },
-        {'src':'./static/shouye/fw5.png',
+        {'src':'./static/shouye/fw5-min.png',
          'index':'1',
         'left':'29.5%',
          'bottom':'43.5%',
@@ -64,9 +64,9 @@ export default {
         spaceBetween: 30,
         observer:true,//修改swiper自己或子元素时，自动初始化swiper
    		observeParents:true,//修改swiper的父元素时，自动初始化swiper
-   		preloadImages: false,
-        // Enable lazy loading
-        lazyLoading: true,
+// 		preloadImages: false,
+//      // Enable lazy loading
+//      lazyLoading: true,
         loop: true
     	});
   },

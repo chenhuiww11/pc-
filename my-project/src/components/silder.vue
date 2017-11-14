@@ -9,8 +9,8 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="item in imglist">
             	 <div class="move" @click="jump(item.index)"></div>
-            	 <img :src="item.src" class="pic swiper-lazy" @click="jump(item.index)"/>
-            	 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            	 <img :src="item.src" class="pic " @click="jump(item.index)"/>
+            	 <!--<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>-->
             </div>
         </div>
         <!-- Add Arrows -->
@@ -25,27 +25,27 @@ export default {
   data () {
     return {
       imglist:[
-        {'src':'./static/shouye/1.jpg',
+        {'src':'./static/shouye/1-min.jpg',
          'index':'0',
         },
-        {'src':'./static/shouye/2.jpg',
+        {'src':'./static/shouye/2-min.jpg',
          'index':'1',
         },
-        {'src':'./static/shouye/3.jpg',
+        {'src':'./static/shouye/3-min.jpg',
          'index':'2'},
-        {'src':'./static/shouye/4.jpg',
+        {'src':'./static/shouye/4-min.jpg',
          'index':'3'},
-        {'src':'./static/shouye/5.jpg',
+        {'src':'./static/shouye/5-min.jpg',
          'index':'4'},
-        {'src':'./static/shouye/6.jpg',
+        {'src':'./static/shouye/6-min.jpg',
          'index':'5'},
-        {'src':'./static/shouye/7.jpg',
+        {'src':'./static/shouye/7-min.jpg',
          'index':'6'},
-        {'src':'./static/shouye/8.jpg',
+        {'src':'./static/shouye/8-min.jpg',
          'index':'7'},
-        {'src':'./static/shouye/9.jpg',
+        {'src':'./static/shouye/9-min.jpg',
          'index':'8'},
-         {'src':'./static/shouye/10.jpg',
+         {'src':'./static/shouye/10-min.jpg',
          'index':'9'},
       ]
     }
@@ -60,10 +60,10 @@ export default {
         paginationClickable: true,
         spaceBetween: 30,
         observer:true,//修改swiper自己或子元素时，自动初始化swiper
-   		observeParents:true,//修改swiper的父元素时，自动初始化swiper
-   		preloadImages: false,
-        // Enable lazy loading
-        lazyLoading: true,
+   			observeParents:true,//修改swiper的父元素时，自动初始化swiper
+// 			preloadImages: false,
+//      // Enable lazy loading
+//      lazyLoading: true,
         loop: true
     });
   },

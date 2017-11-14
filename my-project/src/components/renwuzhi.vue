@@ -7,7 +7,6 @@
      	<div class="tupian">
      		 <div class="left" @click="jumpleft(imginfo.index)">
      		 	<div class="bigpic">
-            <canvas id="myCanvas"></canvas>
      		 	 <div class="pic">
      		 		<img :src="imginfo.leftpic"/>
      		 		</div>
@@ -150,29 +149,7 @@ export default {
   	self.yeshu=self.$route.params.page
   	self.imginfo=self.imglist[self.yeshu]
   	console.log(document.body.scrollHeight)
-	$('.gushiji').css('height',document.body.scrollHeight)
-
-    var canvas = document.getElementById("myCanvas");
-//简单地检测当前浏览器是否支持Canvas对象，以免在一些不支持html5的浏览器中提示语法错误
-    if(canvas.getContext){
-      //获取对应的CanvasRenderingContext2D对象(画笔)
-      var ctx = canvas.getContext("2d");
-
-      //开始一个新的绘制路径
-      ctx.beginPath();
-      //设置弧线的颜色为蓝色
-//      ctx.strokeStyle = "blue";
-      var circle = {
-        x : 107,    //圆心的x轴坐标值
-        y : 107,    //圆心的y轴坐标值
-        r : 50      //圆的半径
-      };
-//      ctx.fillStyle = "rgba(100,150,185,0.5)"
-      //沿着坐标点(100,100)为圆心、半径为50px的圆的顺时针方向绘制弧线
-      ctx.arc(circle.x, circle.y, circle.r, 0, Math.PI / 2, false);
-      //按照指定的路径绘制弧线
-//      ctx.stroke();
-    }
+		$('.gushiji').css('height',document.body.scrollHeight)
   },
   methods: {
     jumpleft(val){
@@ -343,19 +320,24 @@ export default {
     width: 214px;
     height: 214px;
     overflow: hidden;
-    border: 1px solid #C0CCDA;
+    /*border: 1px solid #C0CCDA;*/
     box-sizing: border-box;
     padding-top: 4px;
     padding-left: 4px;
    position: relative;
  }
  .pic{
- 		background: #455a64;
- 		border-radius:50%;
-   -webkit-border-radius: 50%;
- 		width: 204px;
- 		height: 204px;
- 		overflow: hidden;
+ 		width: 96%;
+    height: 96%;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAUVBMV…Q6KHc3xBinQh1JBrHfQ6emedPGWGZrjN7mSXVh7xNJ+AfApG4Lbh0pFAAAAABJRU5ErkJggg==) no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 2px;
+    z-index: 3;
+    left: -2px;
  }
  .right:hover{
  	cursor: pointer;

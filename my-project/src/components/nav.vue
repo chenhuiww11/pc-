@@ -15,12 +15,12 @@
       	故事集
       	<img src="../../static/shouye/line.png" class="line"/>
       </li>
-      <li class="active" @click="jump(4)">
-      	大事纪
+      <li class="active">
+      	<a  href="#002">大事纪</a>
       	<img src="../../static/shouye/line.png" class="line"/>
       </li>
-      <li class="active" @click="jump(5)">
-      	关于苍穹榜
+      <li class="active">
+      	<a  href="#001">关于苍穹榜</a>
       </li>
     </ul>
   </div>
@@ -88,6 +88,12 @@ export default {
 }
 .nav .line{
 	width: 80%;
+}
+.active a{
+		color: #37474f;
+}
+.active a:hover{
+		color: #b70000;
 }
 .active:hover{
 	color: #b70000;
