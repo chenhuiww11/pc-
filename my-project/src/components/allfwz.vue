@@ -96,6 +96,9 @@ export default {
  	top: 40%;
  	left: 50%;
  	transform: translate(-50%,-50%);
+   -ms-transform: translate(-50%,-50%);
+   -moz-transform: translate(-50%,-50%);
+   -o-transform: translate(-50%,-50%);
  	-webkit-transform: translate(-50%,-50%);
  	overflow: hidden;
 
@@ -108,17 +111,24 @@ export default {
  	bottom: 20px;
  		left: 50%;
  	transform: translateX(-50%);
+   -ms-transform: translateX(-50%);
+   -moz-transform: translateX(-50%);
+   -o-transform: translateX(-50%);
  	-webkit-transform: translateX(-50%);
  	width: 898px;
  }
  .gsjbuyinfo{
-    display: -webkit-box;
+    /*display: -webkit-box;*/
     width: 100%;
     margin-top: 120px;
+   clear: both;
+   overflow: hidden;
 }
 .gsjbuyinfo li{
-	padding: 0 20px;
-    -webkit-box-flex: 1
+  width: 16%;
+	padding: 0 2%;
+  float: left;
+    /*-webkit-box-flex: 1*/
 }
 .gsjbuyinfo li:hover{
 	cursor: pointer;
@@ -135,6 +145,7 @@ export default {
    transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
+   -ms-transition: transform 1s;
    -o-transition: transform 1s;
  }
  .gsjbuyinfo li:hover .gsjbuyinfoimg{
@@ -144,6 +155,7 @@ export default {
    transform:scale(1.2,1.2);
    -webkit-transform:scale(1.2,1.2);
    -moz-transform:scale(1.2,1.2);
+   -ms-transform:scale(1.2,1.2);
    -o-transform:scale(1.2,1.2);
  }
 .gsjbuyinfo .text{

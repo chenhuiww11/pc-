@@ -54,15 +54,11 @@ export default {
   },
   methods: {
   	handleScroll () {
-    	this.scrolled = window.scrollY > 0;
-    	if(window.scrollY>this.height){
+      let scrolled = window.scrollY || document.documentElement.scrollTop || 0
+    	if(scrolled > this.height){
     		this.loading=true;
-//  			setTimeout(function(){
-//				var height=$('#app').height()-180
-//				$('#start').css('height',height+'px')
-//		},1000)
     	}
-    	if(window.scrollY>1100){
+    	if(scrolled>1100){
     		$('.navw').fadeIn(500);
     	}else{
     		$('.navw').fadeOut(500);

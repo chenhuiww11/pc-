@@ -1,5 +1,5 @@
 <template>
-	
+
   <!--<el-carousel :interval="5000" arrow="always" :autoplay="false" trigger="click" height="580px">
     <el-carousel-item v-for="item in imglisttwo" :key="4">
       <img :src="item.src" class="pic" @click="jump(item.index)"/>
@@ -102,7 +102,10 @@ export default {
   }
   .people .swiper-button-next{
   	transform: rotate(180deg);
-  	-webkit-transform: rotate(180deg);;
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  	-webkit-transform: rotate(180deg);
   }
   .people .swiper-slide{
   	text-align: center;

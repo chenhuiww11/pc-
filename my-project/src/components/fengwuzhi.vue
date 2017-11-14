@@ -187,6 +187,7 @@ export default {
  	transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
+   -ms-transition: transform 1s;
    -o-transition: transform 1s;
  }
  .left:hover .pic>img{
@@ -194,6 +195,7 @@ export default {
  	transform:scale(1.2,1.2);
    -webkit-transform:scale(1.2,1.2);
    -moz-transform:scale(1.2,1.2);
+   -ms-transform:scale(1.2,1.2);
    -o-transform:scale(1.2,1.2);
  }
  .left:hover .textinfo{
@@ -220,6 +222,7 @@ export default {
  	transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
    -o-transition: transform 1s;
  }
  .right:hover .bigpic{
@@ -230,6 +233,7 @@ export default {
  	transform:scale(1.2,1.2);
    -webkit-transform:scale(1.2,1.2);
    -moz-transform:scale(1.2,1.2);
+    -ms-transform:scale(1.2,1.2);
    -o-transform:scale(1.2,1.2);
  }
  .right{

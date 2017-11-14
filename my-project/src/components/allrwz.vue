@@ -148,6 +148,9 @@ export default {
  	top: 38%;
  	left: 50%;
  	transform: translate(-50%,-50%);
+   -ms-transform: translate(-50%,-50%);
+   -moz-transform: translate(-50%,-50%);
+   -o-transform: translate(-50%,-50%);
  	-webkit-transform: translate(-50%,-50%);
  	overflow: hidden;
 
@@ -160,6 +163,9 @@ export default {
  	bottom: 20px;
  		left: 50%;
  	transform: translateX(-50%);
+   -ms-transform: translateX(-50%);
+   -moz-transform: translateX(-50%);
+   -o-transform: translateX(-50%);
  	-webkit-transform: translateX(-50%);
  	width: 898px;
  }
@@ -179,7 +185,7 @@ export default {
     height: 200px;
     border-radius:50%;
     margin: 0 auto;
-      border: 1px solid rgba(0,0,0,0);
+    border: 1px solid rgba(0,0,0,0);
 }
 .inyuan{
 	width: 96%;

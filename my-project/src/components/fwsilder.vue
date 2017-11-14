@@ -1,5 +1,5 @@
 <template>
-	
+
   <!--<el-carousel :interval="5000" arrow="always" :autoplay="false">
     <el-carousel-item v-for="item in imglisttwo" :key="2">
       <img :src="item.src" class="pic"  @click="jump(item.index)"/>
@@ -38,7 +38,7 @@ export default {
         {'src':'./static/shouye/fw3.png',
          'index':'3',
 		 'left':'32%',
-         'bottom':'42%',	        
+         'bottom':'42%',
         },
         {'src':'./static/shouye/fw4.png',
          'index':'0',
@@ -84,7 +84,7 @@ export default {
   .fwzhi .pic{
   	width: 900px;
   	height: 514px;
-  	
+
   }
   .fwzhi .swiper-button-nexta{
   	background: url(../../static/shouye/left.png);
@@ -106,7 +106,10 @@ export default {
   }
   .fwzhi .swiper-button-nexta{
   	transform: rotate(180deg);
-  	-webkit-transform: rotate(180deg);;
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
   }
   .fwzhi .swiper-slide{
   	text-align: center;

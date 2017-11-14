@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import ejnav from '@/components/ejnav'	
+import ejnav from '@/components/ejnav'
 export default {
   name: 'HelloWorld',
   components: {
@@ -41,7 +41,7 @@ export default {
     outjump(val){
         window.location.href = val;
     },
-  }  
+  }
 }
 </script>
 
@@ -61,6 +61,9 @@ export default {
  	top: 40%;
  	left: 50%;
  	transform: translate(-50%,-50%);
+   -moz-transform: translate(-50%,-50%);
+   -ms-transform: translate(-50%,-50%);
+   -o-transform: translate(-50%,-50%);
  	-webkit-transform: translate(-50%,-50%);
  }
  .banquan{
@@ -68,6 +71,9 @@ export default {
  	bottom: 20px;
  		left: 50%;
  	transform: translateX(-50%);
+   -moz-transform: translateX(-50%);
+   -ms-transform: translateX(-50%);
+   -o-transform: translateX(-50%);
  	-webkit-transform: translateX(-50%);
  	width: 898px;
  }
@@ -83,12 +89,14 @@ export default {
  	left: 28px;
  }
  .gsjbuyinfo{
-    display: -webkit-box;
-    width: 374px;
+   width: 374px;
+   clear: both;
+   overflow: hidden;
 }
 .gsjbuyinfo li{
-    padding: 0 30px;
-    -webkit-box-flex: 1
+  width: 64px;
+  float: left;
+  padding: 0 30px;
 }
 .gsjbuyinfo li:hover{
 	cursor: pointer;

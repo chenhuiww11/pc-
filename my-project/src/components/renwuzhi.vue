@@ -314,12 +314,14 @@ export default {
  	transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
+   -ms-transition: transform 1s;
    -o-transition: transform 1s;
  }
  .left:hover .pic>img{
  	cursor: pointer;
    transform:scale(1.05,1.05);
    -webkit-transform:scale(1.05,1.05);
+   -ms-transform:scale(1.05,1.05);
    -moz-transform:scale(1.05,1.05);
    -o-transform:scale(1.05,1.05);
  }
@@ -367,6 +369,7 @@ export default {
  	transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
+   -ms-transition: transform 1s;
    -o-transition: transform 1s;
  }
   .right:hover .pic>img{
@@ -374,6 +377,7 @@ export default {
  	transform:scale(1.05,1.05);
    -webkit-transform:scale(1.05,1.05);
    -moz-transform:scale(1.05,1.05);
+    -ms-transform:scale(1.05,1.05);
    -o-transform:scale(1.05,1.05);
  }
  .banquan{
