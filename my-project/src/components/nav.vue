@@ -80,7 +80,7 @@ export default {
 	width: 100%;
 	height: 20%;
 	text-align: center;
-	font-size: 22px;
+	font-size: 20px;
 	color: #37474f;
 	box-sizing: border-box;
 	line-height: 1.6;
