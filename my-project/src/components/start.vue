@@ -126,7 +126,7 @@ export default {
 	.fwzhi{
 		width: 100%;
     position: relative;
-    background: url(/static/img/fengwu_02.4575263.jpg) no-repeat 0 -190px;
+    background: url(../../static/shouye/fengwu_02.jpg) no-repeat 0 -190px;
     background-size: 100%;
     min-height: 500px;
     -webkit-box-sizing: border-box;
