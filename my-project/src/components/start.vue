@@ -106,7 +106,7 @@ export default {
 		background-size:100%;
 		min-height: 580px;
 		box-sizing: border-box;
-		padding-top: 30%;
+		padding-top:26%;
 
 	}
 	.title{
@@ -131,7 +131,7 @@ export default {
     min-height: 500px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding-top: 23%;
+    padding-top: 25%;
 	}
 	.fwz{
 		width: 1200px;
