@@ -297,19 +297,11 @@ export default {
  }
  .left:hover .pic>img{
  	cursor: pointer;
-<<<<<<< HEAD
  	border-radius: 50%;
  	-webkit-border-radius: 50%;
- 	
- 	transform:scale(1.05,1.05);
-   -webkit-transform:scale(1.05,1.05);
-=======
    transform:scale(1.05,1.05);
    -webkit-transform:scale(1.05,1.05);
    -ms-transform:scale(1.05,1.05);
->>>>>>> e0b189d379879d9c4fe2b7972bbc07adab8d4e83
-   -moz-transform:scale(1.05,1.05);
-   -o-transform:scale(1.05,1.05);
  }
  .left:hover .textinfo{
  	color: #b70000;
@@ -325,13 +317,9 @@ export default {
  }
  .bigpic{
  		border-radius: 50%;
-<<<<<<< HEAD
  		-webkit-border-radius: 50%;
  		-moz-border-radius: 50%;
  		-o-border-radius: 50%;
-=======
-   -webkit-border-radius: 50%;
->>>>>>> e0b189d379879d9c4fe2b7972bbc07adab8d4e83
     width: 214px;
     height: 214px;
     overflow: hidden;
@@ -342,16 +330,6 @@ export default {
    position: relative;
  }
  .pic{
-<<<<<<< HEAD
- 		background: #455a64;
- 		border-radius:50%;
- 		-webkit-border-radius: 50%;
- 		-moz-border-radius: 50%;
- 		-o-border-radius: 50%;
- 		width: 204px;
- 		height: 204px;
- 		overflow: hidden;
-=======
  		width: 96%;
     height: 96%;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAUVBMV…Q6KHc3xBinQh1JBrHfQ6emedPGWGZrjN7mSXVh7xNJ+AfApG4Lbh0pFAAAAABJRU5ErkJggg==) no-repeat;
@@ -363,7 +341,6 @@ export default {
     top: 2px;
     z-index: 3;
     left: -2px;
->>>>>>> e0b189d379879d9c4fe2b7972bbc07adab8d4e83
  }
  .right:hover{
  	cursor: pointer;
@@ -373,11 +350,8 @@ export default {
  	text-align: right;
  }
  .right img{
-<<<<<<< HEAD
  	border-radius: 50%;
-=======
    display: block;
->>>>>>> e0b189d379879d9c4fe2b7972bbc07adab8d4e83
  	transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
@@ -389,11 +363,7 @@ export default {
  	transform:scale(1.05,1.05);
    -webkit-transform:scale(1.05,1.05);
    -moz-transform:scale(1.05,1.05);
-<<<<<<< HEAD
-=======
     -ms-transform:scale(1.05,1.05);
->>>>>>> e0b189d379879d9c4fe2b7972bbc07adab8d4e83
-   -o-transform:scale(1.05,1.05);
  }
  .banquan{
  	width: 898px;
