@@ -305,8 +305,11 @@ export default {
 	color: #B70000;
 }
 .pic{
+	-webkit-transform: translate3d(0,0,0); /*开启硬件加速*/
+-webkit-backface-visibility: hidden; /*元素旋转时隐藏背面*/
+-webkit-transform-style: preserve-3d; /*保留3D空间*/
 		transition: transform 1s;
-   -webkit-transition: transform 1s; /* Safari */
+   -webkit-transition: transform 1s; 
    -moz-transition: transform 1s;
    -ms-transition: transform 1s;
    -o-transition: transform 1s;
@@ -318,6 +321,13 @@ export default {
    -moz-transform:scale(1.05,1.05);
     -ms-transform:scale(1.05,1.05);
    -o-transform:scale(1.05,1.05);
+}
+.select{
+	transform:translateX(0);
+   -webkit-transform:translateX(0);
+   -moz-transform:translateX(0);
+    -ms-transform:translateX(0);
+   -o-transform:translateX(0);
 }
 /*.donghua{
 	 -webkit-animation: twinkling2 .5s  linear;

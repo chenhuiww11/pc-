@@ -15,6 +15,9 @@ export default {
 
 <style>
 @media handheld and (min-width:360px),screen and (max-width:1361px){
+	body,html{
+		-webkit-backface-visibility: hidden;
+	}
 		#app .imgpic{
 			    width: 400px;
 			}

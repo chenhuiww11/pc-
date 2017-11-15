@@ -249,12 +249,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  #myCanvas{
-    width: 214px;
-    height: 214px;
-    position: absolute;
-    left: 0;
-  }
  .fengwuzhi{
  	width: 100%;
  	background-size:cover;
@@ -279,9 +273,9 @@ export default {
  	margin-top: 100px;
  }
  .tupian{
- 	width: 594px;
+  width: 460px;
  	overflow: hidden;
- 	margin: 60px auto;
+ 	margin: 60px auto 220px;
  }
  .left{
  	float: left;
@@ -320,8 +314,8 @@ export default {
  		-webkit-border-radius: 50%;
  		-moz-border-radius: 50%;
  		-o-border-radius: 50%;
-    width: 214px;
-    height: 214px;
+       width: 190px;
+    height: 190px;
     overflow: hidden;
     /*border: 1px solid #C0CCDA;*/
     box-sizing: border-box;

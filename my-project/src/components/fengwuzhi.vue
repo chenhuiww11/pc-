@@ -177,7 +177,7 @@ export default {
  	width: 594px;
  	height: 218px;
  	overflow: hidden;
- 	margin: 60px auto;
+ 	margin: 60px auto 220px;
  }
  .left{
  	float: left;
