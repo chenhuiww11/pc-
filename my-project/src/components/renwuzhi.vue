@@ -5,6 +5,7 @@
      	<!--<img src="./static/fengwuzhi/cangqiong.jpg"/>-->
      	<img :src="imginfo.wenzi" class="text"/>
      	<div class="tupian">
+     		<img src="../../static/renwuzhi/jtou.png" style="margin-bottom: 60px;width: 480px;" />
      		 <div class="left" @click="jumpleft(imginfo.index)">
      		 	<div class="bigpic">
      		 	 <div class="pic">
