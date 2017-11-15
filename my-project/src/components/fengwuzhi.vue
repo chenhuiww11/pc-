@@ -177,7 +177,7 @@ export default {
  	width: 594px;
  	height: 218px;
  	overflow: hidden;
- 	margin: 80px auto;
+ 	margin: 60px auto;
  }
  .left{
  	float: left;
@@ -228,6 +228,9 @@ export default {
    -webkit-transform:scale(1.2,1.2);
    -moz-transform:scale(1.2,1.2);
    -o-transform:scale(1.2,1.2);
+ }
+ .right:hover .bigpic{
+ border: 1px solid  #b70000;
  }
  .right{
  	float: right;

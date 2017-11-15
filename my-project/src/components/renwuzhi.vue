@@ -275,13 +275,14 @@ export default {
  .tupian{
  	width: 594px;
  	overflow: hidden;
- 	margin: 80px auto;
+ 	margin: 60px auto;
  }
  .left{
  	float: left;
- 	width: 208px;
+ 	overflow: hidden;
  }
  .left img{
+ 	border-radius: 50%;
  	transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
@@ -289,10 +290,13 @@ export default {
  }
  .left:hover .pic>img{
  	cursor: pointer;
- 	transform:scale(1.2,1.2);
-   -webkit-transform:scale(1.2,1.2);
-   -moz-transform:scale(1.2,1.2);
-   -o-transform:scale(1.2,1.2);
+ 	border-radius: 50%;
+ 	-webkit-border-radius: 50%;
+ 	
+ 	transform:scale(1.05,1.05);
+   -webkit-transform:scale(1.05,1.05);
+   -moz-transform:scale(1.05,1.05);
+   -o-transform:scale(1.05,1.05);
  }
  .left:hover .textinfo{
  	color: #b70000;
@@ -308,6 +312,9 @@ export default {
  }
  .bigpic{
  		border-radius: 50%;
+ 		-webkit-border-radius: 50%;
+ 		-moz-border-radius: 50%;
+ 		-o-border-radius: 50%;
     width: 214px;
     height: 214px;
     overflow: hidden;
@@ -319,6 +326,9 @@ export default {
  .pic{
  		background: #455a64;
  		border-radius:50%;
+ 		-webkit-border-radius: 50%;
+ 		-moz-border-radius: 50%;
+ 		-o-border-radius: 50%;
  		width: 204px;
  		height: 204px;
  		overflow: hidden;
@@ -331,6 +341,7 @@ export default {
  	text-align: right;
  }
  .right img{
+ 	border-radius: 50%;
  	transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
@@ -338,10 +349,10 @@ export default {
  }
   .right:hover .pic>img{
  	cursor: pointer;
- 	transform:scale(1.2,1.2);
-   -webkit-transform:scale(1.2,1.2);
-   -moz-transform:scale(1.2,1.2);
-   -o-transform:scale(1.2,1.2);
+ 	transform:scale(1.05,1.05);
+   -webkit-transform:scale(1.05,1.05);
+   -moz-transform:scale(1.05,1.05);
+   -o-transform:scale(1.05,1.05);
  }
  .banquan{
  	width: 898px;
