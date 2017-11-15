@@ -5,19 +5,19 @@
   	<!--人物志-->
   	<div class="people">
   		 <div class="renwu">
-  			  <silder></silder>
+  			  <silder v-if="one"></silder>
   			</div>
   	</div>
   	<!--风物志-->
   	<div class="fwzhi" v-if="loading">
   		<div class="fwz">
-  			  <fwsilder></fwsilder>
+  			  <fwsilder v-if="one"></fwsilder>
   			</div>
   	</div>
   	<!--大事纪-->
-  	<img src="../../static/shouye/dsj.png" class="dsj" id="dsj" v-if="loading"/>
+  	<a name="002" id="002" ><img src="../../static/shouye/dsj.png" class="dsj" id="dsj" v-if="loading"/></a>
   	<!--苍穹榜-->
-  	<img src="../../static/shouye/cqb.jpg" class="cqb" v-if="loading"/>
+  	<a name="001" id="001" ><img src="../../static/shouye/cqb.jpg" class="cqb" v-if="loading"/></a>
     <!--<router-view/>-->
     <div class="navw" @click="back">
     	<img src="../../static/shouye/top.png"/>
@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import silder from '@/components/silder'	
-import nava from '@/components/nav'	
-import fwsilder from '@/components/fwsilder'	
+import silder from '@/components/silder'
+import nava from '@/components/nav'
+import fwsilder from '@/components/fwsilder'
 export default {
   name: 'app',
   components: {
@@ -38,24 +38,38 @@ export default {
 		},
 	data () {
     return {
-      loading:false,
+      loading:true,
       height:$(document).height()/2,
+      count:0,
+      one:false
     }
   },
-	mounted(){	
+	mounted(){
 		window.addEventListener('scroll', this.handleScroll);
-  },	
+    this.$nextTick(()=>{
+      setTimeout(()=>{
+        console.log($('.dsj').offset().top)
+        window.sessionStorage.setItem('dsjscrollheight',$('.dsj').offset().top+150)
+        window.sessionStorage.setItem('cqbscrollheight',$('.cqb').offset().top+50)
+      },0)
+    })
+     var _this = this
+            let imgs = document.querySelectorAll('img')
+            Array.from(imgs).forEach((item)=>{
+                let img = new Image()
+                img.onload = ()=>{
+                    this.count++
+                }
+                img.src=item.getAttribute('src')
+            })
+  },
   methods: {
   	handleScroll () {
-    	this.scrolled = window.scrollY > 0;
-    	if(window.scrollY>this.height){
+      let scrolled = window.scrollY || document.documentElement.scrollTop || 0
+    	if(scrolled > this.height){
     		this.loading=true;
-//  			setTimeout(function(){
-//				var height=$('#app').height()-180
-//				$('#start').css('height',height+'px')
-//		},1000)
     	}
-    	if(window.scrollY>1100){
+    	if(scrolled>1100){
     		$('.navw').fadeIn(500);
     	}else{
     		$('.navw').fadeOut(500);
@@ -65,6 +79,16 @@ export default {
   	$('body,html').animate({ scrollTop: 0 }, 200);
   	}
   },
+   watch:{
+	        count (val,oldval) {
+	        	console.log(val)
+	        	var self=this;
+	            if(val >= 8){
+	                self.one=true
+//	                //然后可以对后台发送一些ajax操作
+	            }
+	        }
+        }
 }
 </script>
 
@@ -74,7 +98,7 @@ export default {
 		position: relative;
 		overflow: hidden;
 	}
-	
+
 	.people{
 		width: 100%;
 		position: relative;
@@ -83,13 +107,14 @@ export default {
 		min-height: 580px;
 		box-sizing: border-box;
 		padding-top: 25%;
-		
+
 	}
 	.title{
 		position: absolute;
 		left: 50%;
-		transform: translateX(-50%);
-		-webkit-transform: translateX(-50%);
+		margin-left: -268px;
+		/*transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);*/
 		top: 280px;
 		width: 537px;
 	}
@@ -100,13 +125,13 @@ export default {
 	}
 	.fwzhi{
 		width: 100%;
-		position: relative;
-		background:url(../../static/shouye/fengwu_02.jpg) no-repeat;
-		background-size:100%;
-		min-height: 500px;
-		top: -170px;
-		box-sizing: border-box;
-		padding-top: 36%;
+    position: relative;
+    background: url(/static/img/fengwu_02.4575263.jpg) no-repeat 0 -190px;
+    background-size: 100%;
+    min-height: 500px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 22%;
 	}
 	.fwz{
 		width: 1200px;

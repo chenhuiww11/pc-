@@ -15,10 +15,10 @@
      		 </div>
      		 <div class="right" @click="jumpright(imginfo.index)">
      		 	<div class="bigpic">
-     		 	<div class="pic">
-     		 	 <img :src="imginfo.rightpic"/>
+     		 	  <div class="pic">
+     		 	    <img :src="imginfo.rightpic"/>
      		 	 	</div>
-     		 	 	</div>
+     		 	</div>
      		 	 <p class="textinfo">{{imginfo.rightinfo}}</p>
      		 </div>
      	</div>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import ejnav from '@/components/ejnav'	
+import ejnav from '@/components/ejnav'
 export default {
   name: 'HelloWorld',
   components: {
@@ -139,7 +139,7 @@ export default {
     	  	leftinfo:'林雨寒',
     	  	rightinfo:'姜易年',
     	  },
-    	
+
     	],
     	imginfo:[]
     }
@@ -149,7 +149,7 @@ export default {
   	self.yeshu=self.$route.params.page
   	self.imginfo=self.imglist[self.yeshu]
   	console.log(document.body.scrollHeight)
-	$('.gushiji').css('height',document.body.scrollHeight)
+		$('.gushiji').css('height',document.body.scrollHeight)
   },
   methods: {
     jumpleft(val){
@@ -243,12 +243,18 @@ export default {
     		window.location.reload();
     	}
     },
-  }  
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  #myCanvas{
+    width: 214px;
+    height: 214px;
+    position: absolute;
+    left: 0;
+  }
  .fengwuzhi{
  	width: 100%;
  	background-size:cover;
@@ -286,15 +292,22 @@ export default {
  	transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
+   -ms-transition: transform 1s;
    -o-transition: transform 1s;
  }
  .left:hover .pic>img{
  	cursor: pointer;
+<<<<<<< HEAD
  	border-radius: 50%;
  	-webkit-border-radius: 50%;
  	
  	transform:scale(1.05,1.05);
    -webkit-transform:scale(1.05,1.05);
+=======
+   transform:scale(1.05,1.05);
+   -webkit-transform:scale(1.05,1.05);
+   -ms-transform:scale(1.05,1.05);
+>>>>>>> e0b189d379879d9c4fe2b7972bbc07adab8d4e83
    -moz-transform:scale(1.05,1.05);
    -o-transform:scale(1.05,1.05);
  }
@@ -312,18 +325,24 @@ export default {
  }
  .bigpic{
  		border-radius: 50%;
+<<<<<<< HEAD
  		-webkit-border-radius: 50%;
  		-moz-border-radius: 50%;
  		-o-border-radius: 50%;
+=======
+   -webkit-border-radius: 50%;
+>>>>>>> e0b189d379879d9c4fe2b7972bbc07adab8d4e83
     width: 214px;
     height: 214px;
     overflow: hidden;
-    border: 1px solid #C0CCDA;
+    /*border: 1px solid #C0CCDA;*/
     box-sizing: border-box;
     padding-top: 4px;
     padding-left: 4px;
+   position: relative;
  }
  .pic{
+<<<<<<< HEAD
  		background: #455a64;
  		border-radius:50%;
  		-webkit-border-radius: 50%;
@@ -332,6 +351,19 @@ export default {
  		width: 204px;
  		height: 204px;
  		overflow: hidden;
+=======
+ 		width: 96%;
+    height: 96%;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAUVBMV…Q6KHc3xBinQh1JBrHfQ6emedPGWGZrjN7mSXVh7xNJ+AfApG4Lbh0pFAAAAABJRU5ErkJggg==) no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 2px;
+    z-index: 3;
+    left: -2px;
+>>>>>>> e0b189d379879d9c4fe2b7972bbc07adab8d4e83
  }
  .right:hover{
  	cursor: pointer;
@@ -341,10 +373,15 @@ export default {
  	text-align: right;
  }
  .right img{
+<<<<<<< HEAD
  	border-radius: 50%;
+=======
+   display: block;
+>>>>>>> e0b189d379879d9c4fe2b7972bbc07adab8d4e83
  	transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
+   -ms-transition: transform 1s;
    -o-transition: transform 1s;
  }
   .right:hover .pic>img{
@@ -352,6 +389,10 @@ export default {
  	transform:scale(1.05,1.05);
    -webkit-transform:scale(1.05,1.05);
    -moz-transform:scale(1.05,1.05);
+<<<<<<< HEAD
+=======
+    -ms-transform:scale(1.05,1.05);
+>>>>>>> e0b189d379879d9c4fe2b7972bbc07adab8d4e83
    -o-transform:scale(1.05,1.05);
  }
  .banquan{

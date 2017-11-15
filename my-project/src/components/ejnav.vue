@@ -20,7 +20,7 @@
       	    <span  :class="{'textactive': index==3}">
       	    	故事集
       	    </span>
-      	   
+
       	</li>
       </ul>
   </div>
@@ -45,7 +45,7 @@ export default {
   		}else if(num==3){
   			this.$router.push({ name: 'gushiji'});
   		}
-  	
+
   	}
   },
 }
@@ -56,7 +56,7 @@ export default {
    .erjinva{
    	width: 100%;
    	height: 123px;
-   	background: url(../../static/gushiji/nav.png);
+   	background: url(../../static/gushiji/nav.png) no-repeat;
    }
    .innav{
    	width: 840px;

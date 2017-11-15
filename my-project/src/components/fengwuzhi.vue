@@ -11,7 +11,7 @@
      		 	 <div class="pic">
      		 		<img :src="imginfo.leftpic"/>
      		 		</div>
-     		 		 	</div>	
+     		 		 	</div>
      		 		 	<p class="textinfo">{{imginfo.leftinfo}}</p>
      		 </div>
      		 <div class="right" @click="jumpright(imginfo.index)">
@@ -19,7 +19,7 @@
      		 	 <div class="pic">
      		 	 <img :src="imginfo.rightpic"/>
      		 	 </div>
-     		 		 	</div>	
+     		 		 	</div>
      		 		 	 <p class="textinfo">{{imginfo.rightinfo}}</p>
      		 </div>
      	</div>
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import ejnav from '@/components/ejnav'	
+import ejnav from '@/components/ejnav'
 export default {
   name: 'HelloWorld',
   components: {
@@ -90,7 +90,7 @@ export default {
     	  	leftinfo:'无尽火狱',
     	  	rightinfo:'苍穹宫',
     	  },
-    	
+
     	],
     	imginfo:[]
     }
@@ -144,7 +144,7 @@ export default {
     		window.location.reload();
     	}
     },
-  }  
+  }
 }
 </script>
 
@@ -187,6 +187,7 @@ export default {
  	transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
+   -ms-transition: transform 1s;
    -o-transition: transform 1s;
  }
  .left:hover .pic>img{
@@ -194,6 +195,7 @@ export default {
  	transform:scale(1.2,1.2);
    -webkit-transform:scale(1.2,1.2);
    -moz-transform:scale(1.2,1.2);
+   -ms-transform:scale(1.2,1.2);
    -o-transform:scale(1.2,1.2);
  }
  .left:hover .textinfo{
@@ -220,13 +222,18 @@ export default {
  	transition: transform 1s;
    -webkit-transition: transform 1s; /* Safari */
    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
    -o-transition: transform 1s;
+ }
+ .right:hover .bigpic{
+   border: 1px solid  #b70000;
  }
   .right:hover .pic>img{
  	cursor: pointer;
  	transform:scale(1.2,1.2);
    -webkit-transform:scale(1.2,1.2);
    -moz-transform:scale(1.2,1.2);
+    -ms-transform:scale(1.2,1.2);
    -o-transform:scale(1.2,1.2);
  }
  .right:hover .bigpic{

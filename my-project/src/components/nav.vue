@@ -15,12 +15,12 @@
       	故事集
       	<img src="../../static/shouye/line.png" class="line"/>
       </li>
-      <li class="active" @click="jump(4)">
-      	大事纪
+      <li class="active">
+      	<a  href="#002">大事纪</a>
       	<img src="../../static/shouye/line.png" class="line"/>
       </li>
-      <li class="active" @click="jump(5)">
-      	关于苍穹榜
+      <li class="active">
+      	<a  href="#001">关于苍穹榜</a>
       </li>
     </ul>
   </div>
@@ -47,20 +47,13 @@ export default {
   		}else if(num==3){
   			this.$router.push({ name: 'gushiji'});
   		}else if(num==4){
-  			$('body,html').animate({ scrollTop: this.dsjheight}, 200);
+  			$('body,html').animate({ scrollTop: window.sessionStorage.getItem('dsjscrollheight') ? window.sessionStorage.getItem('dsjscrollheight') : 2000}, 200);
   		}else if(num==5){
-  			$('body,html').animate({ scrollTop: this.cqbheight }, 200);
+  			$('body,html').animate({ scrollTop: window.sessionStorage.getItem('cqbscrollheight') ? window.sessionStorage.getItem('cqbscrollheight') : 3000 }, 200);
   		}
 
   	}
-	},
-	beforeCreate(){
-		let self = this
-		setTimeout(()=>{
-			self.dsjheight = $(".dsj").offset().top
-			self.cqbheight = $(".cqb").offset().top
-		},3000)
-    }
+	}
 }
 </script>
 
@@ -95,6 +88,12 @@ export default {
 }
 .nav .line{
 	width: 80%;
+}
+.active a{
+		color: #37474f;
+}
+.active a:hover{
+		color: #b70000;
 }
 .active:hover{
 	color: #b70000;
