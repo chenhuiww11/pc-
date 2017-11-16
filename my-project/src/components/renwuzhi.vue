@@ -3,7 +3,9 @@
      <ejnav :index="index"></ejnav>
      <div class="info">
      	<!--<img src="./static/fengwuzhi/cangqiong.jpg"/>-->
-     	<img :src="imginfo.wenzi" class="text"/>
+       <div class="text-img">
+         <img :src="imginfo.wenzi" class="text"/>
+       </div>
      	<div class="tupian">
      		<img src="../../static/renwuzhi/jtou.png" style="margin-bottom: 60px;width: 480px;" />
      		 <div class="left" @click="jumpleft(imginfo.index)">
@@ -263,6 +265,11 @@ export default {
  	text-align: center;
  	background: url(../../static/fengwuzhi/cangqiong.jpg) no-repeat;
  	background-size:cover;
+ }
+ .text-img{
+   width: 875px;
+   min-height: 800px;
+   margin: 0 auto;
  }
  .text{
  	/*position: absolute;

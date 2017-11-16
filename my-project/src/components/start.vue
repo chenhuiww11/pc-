@@ -1,6 +1,8 @@
 <template>
   <div id="start">
-  	<img src="../../static/shouye/shouye1.jpg"/>
+    <div class="header-img">
+      <img src="../../static/shouye/shouye1.jpg"/>
+    </div>
   	<nava></nava>
   	<!--人物志-->
   	<div class="people">
@@ -43,6 +45,11 @@ export default {
       count:0,
       one:false
     }
+  },
+  created(){
+    setTimeout(()=>{
+      $('.header-img').css({'width':'100%','height':'auto','minHeight':'auto'})
+    },0)
   },
 	mounted(){
 		window.addEventListener('scroll', this.handleScroll);
@@ -98,7 +105,10 @@ export default {
 		position: relative;
 		overflow: hidden;
 	}
-
+  .header-img{
+    width: 100%;
+    min-height: 1000px;
+  }
 	.people{
 		width: 100%;
 		position: relative;

@@ -1,7 +1,9 @@
 <template>
   <div class="fengwuzhi">
      <ejnav :index="index"></ejnav>
-     <img :src="imginfo.datu" class="banner"/>
+    <div class="fwzbanner">
+      <img :src="imginfo.datu" class="banner"/>
+    </div>
      <div class="info">
      	<!--<img src="./static/fengwuzhi/cangqiong.jpg"/>-->
      	<img :src="imginfo.wenzi" class="text"/>
@@ -155,7 +157,12 @@ export default {
  	background-size:cover;
  	background: #f7ebd8;
  }
+ .fwzbanner{
+   min-height: 500px;
+   width: 100%;
+ }
  .banner{
+   /*min-height: 1000px;*/
  	margin-top: -24px;
  }
  .info{
