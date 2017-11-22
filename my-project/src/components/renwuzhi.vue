@@ -283,7 +283,7 @@ export default {
  .tupian{
   width: 460px;
  	overflow: hidden;
- 	margin: 60px auto 220px;
+ 	margin: 80px auto 220px;
  }
  .left{
  	float: left;

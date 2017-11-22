@@ -8,6 +8,7 @@
      	<!--<img src="./static/fengwuzhi/cangqiong.jpg"/>-->
      	<img :src="imginfo.wenzi" class="text"/>
      	<div class="tupian">
+     		<img src="../../static/renwuzhi/jtou.png" style="margin-bottom: 60px;width: 640px;" />
      		 <div class="left" @click="jumpleft(imginfo.index)">
      		 	<div class="bigpic">
      		 	 <div class="pic">
@@ -182,13 +183,14 @@ export default {
  }
  .tupian{
  	width: 594px;
- 	height: 218px;
+ 	/*height: 218px;*/
  	overflow: hidden;
- 	margin: 60px auto 220px;
+ 	margin: 80px auto 220px;
  }
  .left{
  	float: left;
  	width: 228px;
+ 	margin-left: 10px;
  }
  .left img{
  	transition: transform 1s;
@@ -249,6 +251,7 @@ export default {
  .right{
  	float: right;
  	text-align: right;
+ 	margin-right: 10px;
  }
  .right:hover .textinfo{
  	color: #b70000;
