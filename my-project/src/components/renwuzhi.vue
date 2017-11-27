@@ -340,9 +340,9 @@ export default {
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    top: 2px;
+    top: 1px;
     z-index: 3;
-    left: -2px;
+    left: -1px;
  }
  .right:hover{
  	cursor: pointer;
