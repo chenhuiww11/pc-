@@ -15,7 +15,7 @@ img {
 .data-loading,
 body {
 	background: #f2f4f7;
-	font-family: arial, "Microsoft Yahei", 微软雅黑
+	font-family: "宋体","SimSun","Microsoft Yahei", 微软雅黑,arial
 }
 
 .data-loading .loading-text,
