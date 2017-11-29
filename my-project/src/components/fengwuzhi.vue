@@ -45,9 +45,9 @@ export default {
     	imglist:[
     	  {
     	  	info:'苍穹宫',
-    	  	datu:'./static/fengwuzhi/4.jpg',
+    	  	datu:'./static/fengwuzhi/11.jpg',
     	  	wenzi:'./static/fengwuzhi/1text.png',
-    	  	leftpic:'./static/fengwuzhi/huoyu.png',
+    	  	leftpic:'./static/fengwuzhi/wujin.png',
     	  	rightpic:'./static/fengwuzhi/chijiao.png',
     	  	index:'0',
     	  	leftinfo:'武境',
@@ -57,18 +57,18 @@ export default {
     	   	info:'池教',
     	  	datu:'./static/fengwuzhi/5.jpg',
     	  	wenzi:'./static/fengwuzhi/2text.png',
-    	  	leftpic:'./static/fengwuzhi/cangqiong.png',
-    	  	rightpic:'./static/fengwuzhi/mufu.png',
+    	  	leftpic:'./static/fengwuzhi/mufu.png',
+    	  	rightpic:'./static/fengwuzhi/cangqiong.png',
     	  	index:'1',
     	  	leftinfo:'苍穹宫',
     	  	rightinfo:'牧府',
     	  },
     	   {
     	   	info:'牧府',
-    	  	datu:'./static/fengwuzhi/1.jpg',
+    	  	datu:'./static/fengwuzhi/4.jpg',
     	  	wenzi:'./static/fengwuzhi/3text.png',
     	  	leftpic:'./static/fengwuzhi/chijiao.png',
-    	  	rightpic:'./static/fengwuzhi/wujin.png',
+    	  	rightpic:'./static/fengwuzhi/huoyu.png',
     	  	index:'2',
     	  	leftinfo:'池教',
     	  	rightinfo:'无尽火狱',
@@ -77,8 +77,8 @@ export default {
     	   	info:'无尽火狱',
     	  	datu:'./static/fengwuzhi/3.jpg',
     	  	wenzi:'./static/fengwuzhi/4text.png',
-    	  	leftpic:'./static/fengwuzhi/wujin.png',
-    	  	rightpic:'./static/fengwuzhi/cangqiong.png',
+    	  	leftpic:'./static/fengwuzhi/cangqiong.png',
+    	  	rightpic:'./static/fengwuzhi/wujin.png',
     	  	index:'3',
     	  	leftinfo:'牧府',
     	  	rightinfo:'武境',
@@ -87,8 +87,8 @@ export default {
     	   	info:'武境',
     	  	datu:'./static/fengwuzhi/2.jpg',
     	  	wenzi:'./static/fengwuzhi/5text.png',
-    	  	leftpic:'./static/fengwuzhi/mufu.png',
-    	  	rightpic:'./static/fengwuzhi/huoyu.png',
+    	  	leftpic:'./static/fengwuzhi/huoyu.png',
+    	  	rightpic:'./static/fengwuzhi/mufu.png',
     	  	index:'4',
     	  	leftinfo:'无尽火狱',
     	  	rightinfo:'苍穹宫',
@@ -132,18 +132,23 @@ export default {
     jumpright(val){
     	if(val==0){
     		this.$router.push({ name: 'fengwuzhi',params: {page: 1}});
+    		$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==1){
     		this.$router.push({ name: 'fengwuzhi',params: {page: 2}});
+    		$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==2){
     		this.$router.push({ name: 'fengwuzhi',params: {page: 3}});
+    		$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==3){
     		this.$router.push({ name: 'fengwuzhi',params: {page: 4}});
+    		$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}else if(val==4){
     		this.$router.push({ name: 'fengwuzhi',params: {page: 0}});
+    		$('body,html').animate({ scrollTop: 0 }, 0);
     		window.location.reload();
     	}
     },
