@@ -34,7 +34,7 @@ export default {
     	imglist:[
     	 {
     	   	info:'天罗大陆',
-    	  	datu:'./static/fengwuzhi/mufu.png',
+    	  	datu:'./static/fengwuzhi/cangqiong.png',
     	  	inde:'2',
           tit:'牧府'
     	  },
@@ -52,7 +52,7 @@ export default {
     	  },
     	   {
     	  	info:'北苍大陆',
-    	  	datu:'./static/fengwuzhi/cangqiong.png',
+    	  	datu:'./static/fengwuzhi/mufu.png',
     	  	inde:'0',
            tit:'苍穹宫'
     	  },

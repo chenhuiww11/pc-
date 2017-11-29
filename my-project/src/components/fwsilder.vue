@@ -67,13 +67,15 @@ export default {
 // 		preloadImages: false,
 //      // Enable lazy loading
 //      lazyLoading: true,
-        loop: true
+        loop: false
     	});
   },
   methods: {
   	jump(num){
-  		this.$router.push({ name: 'fengwuzhi',params: {page: num}});
-    		window.location.reload();
+  		var cc=window.location.href.split('#')[0]+'#/fengwuzhi/'+num;
+  		window.open(cc)
+  		//this.$router.push({ name: 'fengwuzhi',params: {page: num}});
+    		//window.location.reload();
   	}
   },
 }

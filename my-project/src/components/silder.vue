@@ -64,14 +64,21 @@ export default {
 // 			preloadImages: false,
 //      // Enable lazy loading
 //      lazyLoading: true,
-        loop: true
+        loop: false
     });
+//  $('.move').click(function(){
+//			alert(swiper.activeIndex); 
+//		})
   },
   methods: {
   	jump(num){
-  		this.$router.push({ name: 'renwuzhi',params: {page: num}});
-    		window.location.reload();
-  	}
+//		alert(num)
+      var cc=window.location.href.split('#')[0]+'#/renwuzhi/'+num;
+//		window.location.href=cc+'#/renwuzhi/'+num
+     window.open(cc)
+//		this.$router.push({ name: 'renwuzhi',params: {page: num}});
+//  		window.location.reload();
+	}
   },
 }
 </script>
