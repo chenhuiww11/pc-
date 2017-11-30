@@ -54,6 +54,7 @@ export default {
 	mounted(){
 		window.addEventListener('scroll', this.handleScroll);
     this.$nextTick(()=>{
+    	
       setTimeout(()=>{
         console.log($('.dsj').offset().top)
         window.sessionStorage.setItem('dsjscrollheight',$('.dsj').offset().top+150)

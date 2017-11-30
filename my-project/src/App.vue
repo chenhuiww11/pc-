@@ -8,7 +8,16 @@
 
 export default {
   name: 'app',
-
+  mounted(){ 
+   
+   	var cc=window.location.href.split('#')[1];
+   	if(cc=="/002"){
+   		window.location.href=window.location.href.split('#')[0]
+   	}else if(cc=="/001"){ 
+   		window.location.href=window.location.href.split('#')[0]
+   	}
+   
+   }
 
 }
 </script>
