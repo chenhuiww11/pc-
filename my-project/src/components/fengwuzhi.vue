@@ -183,11 +183,11 @@ export default {
  	left: 50%;
  	transform: translate(-50%,-50%);
  	-webkit-transform: translate(-50%,-50%);*/
- 	width: 594px;
+ 	width: auto;
  	margin-top: 100px;
  }
  .tupian{
- 	width: 594px;
+ 	width: 586px;
  	/*height: 218px;*/
  	overflow: hidden;
  	margin: 80px auto 220px;
